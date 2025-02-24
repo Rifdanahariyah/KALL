@@ -1,11 +1,6 @@
-# Welcome to your Jupyter Book
+# Welcome to Komputasi Aljabar Linier
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
-
-Check out the content pages bundled with this sample book to see more.
+Komputasi aljabar linier adalah cabang dari ilmu komputer dan matematika yang berfokus pada penerapan konsep aljabar linier untuk menyelesaikan masalah-masalah komputasi. Aljabar linier itu sendiri berhubungan dengan studi mengenai vektor, ruang vektor, matriks, dan transformasi linier. Dalam komputasi aljabar linier, operasi-operasi seperti penjumlahan dan perkalian vektor, pemecahan sistem persamaan linier, serta perhitungan determinan dan invers matriks digunakan dalam banyak aplikasi, terutama di bidang pemrosesan data, grafik komputer, pengolahan citra, pembelajaran mesin (machine learning), dan banyak lagi.
 
 ```{tableofcontents}
 ```
