@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; My sample book</title>
+    <title>1. Contoh Sistem dengan Satu Solusi Unik &#8212; My sample book</title>
   
   
   
@@ -57,11 +57,13 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pembahasan';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="markdown-notebooks.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="markdown.html" />
+    <link rel="next" title="Langkah 1: Menyusun Matriks Augmented" href="materi%20SPL%20gauss.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="markdown-notebooks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,8 +181,8 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="pembahasan.html"><strong>1. Contoh Sistem dengan Satu Solusi Unik</strong></a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>1. Contoh Sistem dengan Satu Solusi Unik</strong></a></li>
 
 
 
@@ -259,7 +261,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpembahasan.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -289,7 +291,7 @@
       
       
       
-      <li><a href="_sources/notebooks.ipynb" target="_blank"
+      <li><a href="_sources/pembahasan.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +301,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -373,7 +375,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>1. Contoh Sistem dengan Satu Solusi Unik</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -382,7 +384,17 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>1. Contoh Sistem dengan Satu Solusi Unik</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sistem-dengan-tak-hingga-banyak-solusi"><strong>2. Contoh Sistem dengan Tak Hingga Banyak Solusi</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sistem-dengan-tanpa-solusi"><strong>3. Contoh Sistem dengan Tanpa Solusi</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-representasi-matriks-augmented"><strong>Langkah 1: Representasi Matriks Augmented</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-eliminasi-gauss"><strong>Langkah 2: Eliminasi Gauss</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-analisis-hasil"><strong>Langkah 3: Analisis Hasil</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan"><strong>Kesimpulan</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-umum"><strong>Kesimpulan Umum</strong></a></li>
 </ul>
 
             </nav>
@@ -395,7 +407,184 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  
+  <section id="contoh-sistem-dengan-satu-solusi-unik">
+<h1><strong>1. Contoh Sistem dengan Satu Solusi Unik</strong><a class="headerlink" href="#contoh-sistem-dengan-satu-solusi-unik" title="Link to this heading">#</a></h1>
+<p>Misalkan sistem persamaan:
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+2x + y + z &amp;= 9 \\
+4x + 3y + 2z &amp;= 24 \\
+6x + 5y + 4z &amp;= 42
+\end{aligned}
+\)</span>$</p>
+<p><strong>Langkah 1: Tulis dalam bentuk matriks augmented</strong>
+$<span class="math notranslate nohighlight">\(
+\begin{bmatrix}
+2 &amp; 1 &amp; 1 &amp; | 9 \\
+4 &amp; 3 &amp; 2 &amp; | 24 \\
+6 &amp; 5 &amp; 4 &amp; | 42
+\end{bmatrix}
+\)</span>$</p>
+<p><strong>Langkah 2: Ubah elemen pivot pertama menjadi 1</strong> (bagi baris pertama dengan 2)
+$<span class="math notranslate nohighlight">\(
+\begin{bmatrix}
+1 &amp; 0.5 &amp; 0.5 &amp; | 4.5 \\
+4 &amp; 3 &amp; 2 &amp; | 24 \\
+6 &amp; 5 &amp; 4 &amp; | 42
+\end{bmatrix}
+\)</span>$</p>
+<p><strong>Langkah 3: Nolkan elemen di bawah pivot pertama</strong>
+$<span class="math notranslate nohighlight">\(
+\begin{align*}
+R_2 &amp;\to R_2 - 4R_1 \\
+R_3 &amp;\to R_3 - 6R_1
+\end{align*}
+\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 0.5 &amp; 0.5 &amp; | 4.5 \\
+0 &amp; 1 &amp; 0 &amp; | 6 \\
+0 &amp; 2 &amp; 1 &amp; | 15
+\end{bmatrix}
+\end{split}\]</div>
+<p><strong>Langkah 4: Nolkan elemen di bawah pivot kedua</strong>
+$<span class="math notranslate nohighlight">\(
+\begin{align*}
+R_3 &amp;\to R_3 - 2R_2
+\end{align*}
+\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 0.5 &amp; 0.5 &amp; | 4.5 \\
+0 &amp; 1 &amp; 0 &amp; | 6 \\
+0 &amp; 0 &amp; 1 &amp; | 3
+\end{bmatrix}
+\end{split}\]</div>
+<p><strong>Langkah 5: Substitusi balik</strong></p>
+<ul class="simple">
+<li><p>( z = 3 )</p></li>
+<li><p>( y = 6 )</p></li>
+<li><p><span class="math notranslate nohighlight">\(( x + 0.5(6) + 0.5(3) = 4.5 \Rightarrow x = 0 )\)</span></p></li>
+</ul>
+<p><strong>Kesimpulan:</strong> ( (x, y, z) = (0,6,3) ) adalah <strong>solusi unik</strong>.</p>
+<iframe src="https://www.geogebra.org/3d/ehvxgmkw"
+width="800" height="600" style="border:0;"></iframe>
+<hr class="docutils" />
+</section>
+<section id="contoh-sistem-dengan-tak-hingga-banyak-solusi">
+<h1><strong>2. Contoh Sistem dengan Tak Hingga Banyak Solusi</strong><a class="headerlink" href="#contoh-sistem-dengan-tak-hingga-banyak-solusi" title="Link to this heading">#</a></h1>
+<p>Misalkan sistem:
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+x + y + z &amp;= 6 \\
+2x + 2y + 2z &amp;= 12 \\
+3x + 3y + 3z &amp;= 18
+\end{aligned}
+\)</span>$</p>
+<p><strong>Langkah 1: Tulis dalam bentuk matriks augmented</strong>
+$<span class="math notranslate nohighlight">\(
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 6 \\
+2 &amp; 2 &amp; 2 &amp; | 12 \\
+3 &amp; 3 &amp; 3 &amp; | 18
+\end{bmatrix}
+\)</span>$</p>
+<p><strong>Langkah 2: Nolkan elemen di bawah pivot pertama</strong>
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+R_2 &amp;\rightarrow R_2 - 2R_1 \\
+R_3 &amp;\rightarrow R_3 - 3R_1
+\end{aligned}
+\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 6 \\
+0 &amp; 0 &amp; 0 &amp; | 0 \\
+0 &amp; 0 &amp; 0 &amp; | 0
+\end{bmatrix}
+\end{split}\]</div>
+<p><strong>Langkah 3: Interpretasi Hasil</strong></p>
+<ul class="simple">
+<li><p>Baris kedua dan ketiga hanya berisi nol, sehingga ada <strong>variabel bebas</strong>.</p></li>
+<li><p>Kita bisa menulis:</p>
+<ul>
+<li><p>( x + y + z = 6 )</p></li>
+<li><p>Pilih  z = t , maka y = 6 - x - t</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Kesimpulan:</strong> Sistem memiliki <strong>tak hingga banyak solusi</strong>, karena terdapat <strong>satu variabel bebas</strong>.</p>
+<iframe src="https://www.geogebra.org/3d/mu9nbhn9"
+width="800" height="600" style="border:0;"></iframe>
+<hr class="docutils" />
+</section>
+<section id="contoh-sistem-dengan-tanpa-solusi">
+<h1><strong>3. Contoh Sistem dengan Tanpa Solusi</strong><a class="headerlink" href="#contoh-sistem-dengan-tanpa-solusi" title="Link to this heading">#</a></h1>
+<p>Mari kita analisis sistem persamaan linear yang diberikan:
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+x + y + z &amp;= 3 \\
+2x + 2y + 2z &amp;= 10 \\
+2x + 2y + 2z &amp;= 15
+\end{aligned}
+\)</span>$</p>
+<section id="langkah-1-representasi-matriks-augmented">
+<h2><strong>Langkah 1: Representasi Matriks Augmented</strong><a class="headerlink" href="#langkah-1-representasi-matriks-augmented" title="Link to this heading">#</a></h2>
+<p>Kita bisa menuliskan sistem ini dalam bentuk matriks:
+$<span class="math notranslate nohighlight">\(
+\begin{bmatrix} 
+1 &amp; 1 &amp; 1 &amp; | 3 \\ 
+2 &amp; 2 &amp; 2 &amp; | 10 \\ 
+2 &amp; 2 &amp; 2 &amp; | 15 
+\end{bmatrix}
+\)</span>$</p>
+</section>
+<section id="langkah-2-eliminasi-gauss">
+<h2><strong>Langkah 2: Eliminasi Gauss</strong><a class="headerlink" href="#langkah-2-eliminasi-gauss" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Baris 2 → Baris 2 - 2 × Baris 1</p></li>
+<li><p>Baris 3 → Baris 3 - 2 × Baris 1</p></li>
+</ul>
+<p>Maka:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 
+1 &amp; 1 &amp; 1 &amp; | 3 \\ 
+0 &amp; 0 &amp; 0 &amp; | 4 \\ 
+0 &amp; 0 &amp; 0 &amp; | 9 
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="langkah-3-analisis-hasil">
+<h2><strong>Langkah 3: Analisis Hasil</strong><a class="headerlink" href="#langkah-3-analisis-hasil" title="Link to this heading">#</a></h2>
+<p>Baris kedua dan ketiga menghasilkan:
+$<span class="math notranslate nohighlight">\(
+0 = 4 \quad \text{(kontradiksi)}
+\]
+\[
+0 = 9 \quad \text{(kontradiksi)}
+\)</span>$</p>
+<p>Pernyataan ini <strong>tidak mungkin benar</strong>, sehingga sistem persamaan ini <strong>tidak memiliki solusi</strong> (inkonsisten).</p>
+</section>
+<section id="kesimpulan">
+<h2><strong>Kesimpulan</strong><a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h2>
+<p>Sistem ini <strong>tidak memiliki solusi</strong> karena baris terakhir mengandung pertidaksamaan yang mustahil ((0 = 9)). Artinya, tidak ada nilai ( x, y, z ) yang dapat memenuhi semua persamaan sekaligus.</p>
+<iframe src="https://www.geogebra.org/3d/y6ywzpq5"width="800" height="600" style="border:0;"></iframe>
+<hr class="docutils" />
+</section>
+</section>
+<section id="kesimpulan-umum">
+<h1><strong>Kesimpulan Umum</strong><a class="headerlink" href="#kesimpulan-umum" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><strong>Satu solusi unik</strong> terjadi jika setelah eliminasi Gauss, matriks menjadi <strong>segitiga atas dengan diagonal utama tidak nol</strong>.</p></li>
+<li><p><strong>Tak hingga banyak solusi</strong> terjadi jika terdapat <strong>variabel bebas</strong> dalam matriks yang menghasilkan satu atau lebih parameter bebas.</p></li>
+<li><p><strong>Tanpa solusi</strong> terjadi jika ada <strong>baris dengan semua elemen nol tetapi nilai konstanta tidak nol</strong>, yang berarti ada kontradiksi dalam sistem.</p></li>
+</ul>
+</section>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -427,7 +616,7 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="markdown.html"
+       href="markdown-notebooks.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
@@ -436,11 +625,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="markdown-notebooks.html"
+       href="materi%20SPL%20gauss.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Langkah 1: Menyusun Matriks Augmented</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -459,7 +648,17 @@ document.write(`
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>1. Contoh Sistem dengan Satu Solusi Unik</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sistem-dengan-tak-hingga-banyak-solusi"><strong>2. Contoh Sistem dengan Tak Hingga Banyak Solusi</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sistem-dengan-tanpa-solusi"><strong>3. Contoh Sistem dengan Tanpa Solusi</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-representasi-matriks-augmented"><strong>Langkah 1: Representasi Matriks Augmented</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-eliminasi-gauss"><strong>Langkah 2: Eliminasi Gauss</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-analisis-hasil"><strong>Langkah 3: Analisis Hasil</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan"><strong>Kesimpulan</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-umum"><strong>Kesimpulan Umum</strong></a></li>
 </ul>
 
   </nav></div>
