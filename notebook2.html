@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Sistem Persamaan Linier &#8212; My sample book</title>
+    <title>Matriks Invers &#8212; My sample book</title>
   
   
   
@@ -59,11 +59,9 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="markdown-notebooks.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="markdown.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -126,6 +124,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -181,8 +181,8 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sistem Persamaan Linier</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Sistem Persamaan Linier</a></li>
 </ul>
 
     </div>
@@ -254,7 +254,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebook2.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -284,7 +284,7 @@
       
       
       
-      <li><a href="_sources/notebooks.ipynb" target="_blank"
+      <li><a href="_sources/notebook2.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -368,7 +368,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Sistem Persamaan Linier</h1>
+    <h1>Matriks Invers</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -378,9 +378,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-eliminasi-gauss">Sistem Eliminasi Gauss</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-persamaan-linear-3-variabel-dengan-eliminasi-gauss">Penyelesaian Persamaan Linear 3 Variabel dengan Eliminasi Gauss</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Matriks Invers</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-matriks-invers"><strong>Definisi Matriks Invers</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-mencari-matriks-invers"><strong>Tugas mencari matriks invers</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menyusun-sistem-persamaan-dalam-bentuk-matriks"><strong>1. Menyusun Sistem Persamaan dalam Bentuk Matriks</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-matriks-invers-a-1"><strong>2. Mencari Matriks Invers <span class="math notranslate nohighlight">\( A^-1 \)</span></strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengalikan-matriks-invers"><strong>3. Mengalikan Matriks Invers</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akhir"><strong>4. Hasil Akhir</strong></a></li>
 </ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -391,267 +399,178 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="sistem-persamaan-linier">
-<h1>Sistem Persamaan Linier<a class="headerlink" href="#sistem-persamaan-linier" title="Link to this heading">#</a></h1>
-<p>Sistem Persamaan Linier adalah kumpulan dua atau lebih persamaan yang memiliki hubungan antara beberapa variabel, di mana setiap persamaan membentuk garis lurus jika digambarkan pada bidang koordinat.</p>
-<p><strong>Ciri-Ciri Sistem Persamaan Linier:</strong></p>
-<ol class="arabic simple">
-<li><p><strong>Mengandung variabel</strong> yang tidak memiliki pangkat atau eksponen (hanya pangkat satu).</p></li>
-<li><p><strong>Hubungan antar variabel berbentuk penjumlahan atau pengurangan</strong> dengan koefisien tertentu.</p></li>
-<li><p><strong>Solusinya adalah titik perpotongan garis</strong> yang mewakili setiap persamaan dalam sistem tersebut.</p></li>
-</ol>
-<p><strong>Contoh dalam Kehidupan Sehari-hari:</strong></p>
-<ul class="simple">
-<li><p>Menghitung harga barang berdasarkan jumlah yang dibeli dan total pembayaran.</p></li>
-<li><p>Menentukan titik temu dua kendaraan yang bergerak dengan kecepatan berbeda.</p></li>
-<li><p>Mengalokasikan sumber daya dalam suatu proyek agar hasilnya optimal.</p></li>
-</ul>
-<p>Sistem persamaan linier sering digunakan dalam berbagai bidang seperti ekonomi, fisika, teknik, dan ilmu komputer untuk menyelesaikan permasalahan yang melibatkan hubungan antara beberapa faktor.</p>
-<section id="sistem-eliminasi-gauss">
-<h2>Sistem Eliminasi Gauss<a class="headerlink" href="#sistem-eliminasi-gauss" title="Link to this heading">#</a></h2>
-<p>Sistem Eliminasi Gauss adalah metode dalam aljabar linear yang digunakan untuk menyelesaikan sistem persamaan linear dengan cara mengubahnya menjadi bentuk yang lebih sederhana. Proses ini dilakukan dengan melakukan operasi baris pada matriks yang mewakili sistem persamaan tersebut.</p>
+  <section id="matriks-invers">
+<h1><strong>Matriks Invers</strong><a class="headerlink" href="#matriks-invers" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
-<p>Untuk menyelesaikan sistem persamaan linear menggunakan metode eliminasi Gauss, kita perlu memiliki tiga persamaan dengan tiga variabel. Mari kita buat tiga persamaan sebagai contoh:</p>
-<p><span class="math notranslate nohighlight">\(
-\begin{aligned}
-  x + 2y + z = 4\\  
-  2x + y - z = 1 \\ 
-  3x - y + 2z = 7 
-\end{aligned}
-\)</span></p>
-<p>Kita akan menyusun sistem persamaan ini dalam bentuk matriks augmented dan kemudian menggunakan metode eliminasi Gauss untuk menemukan solusi.</p>
-<p><strong>Langkah 1: Menyusun Matriks Augmented</strong></p>
-<p>Matriks augmented untuk sistem di atas adalah:</p>
-<p><span class="math notranslate nohighlight">\(
-\begin{bmatrix}
-1 &amp; 2 &amp; 1 &amp; | &amp; 4 \\
-2 &amp; 1 &amp; -1 &amp; | &amp; 1 \\
-3 &amp; -1 &amp; 2 &amp; | &amp; 7
-\end{bmatrix}
-\)</span></p>
-<p><strong>Langkah 2: Eliminasi Gauss</strong></p>
-<p>Kita akan melakukan operasi baris elementer untuk mengubah matriks ini menjadi bentuk segitiga atas.</p>
-<ol class="arabic simple">
-<li><p><strong>Baris 2</strong>: Kurangi 2 kali Baris 1 dari Baris 2</p></li>
-<li><p><strong>Baris 3</strong>: Kurangi 3 kali Baris 1 dari Baris 3</p></li>
-</ol>
-<p>Setelah langkah pertama, matriks menjadi:</p>
-<p><span class="math notranslate nohighlight">\(
-\begin{bmatrix}
-1 &amp; 2 &amp; 1 &amp; | &amp; 4 \\
-0 &amp; -3 &amp; -3 &amp; | &amp; -7 \\
-0 &amp; -7 &amp; -1 &amp; | &amp; -5
-\end{bmatrix}
-\)</span></p>
-<ol class="arabic simple" start="3">
-<li><p><strong>Baris 3</strong>: Kurangi <span class="math notranslate nohighlight">\(\frac{7}{3}\)</span> kali Baris 2 dari Baris 3</p></li>
-</ol>
-<p>Setelah langkah kedua, matriks menjadi:</p>
-<p><span class="math notranslate nohighlight">\(
-\begin{bmatrix}
-1 &amp; 2 &amp; 1 &amp; | &amp; 4 \\
-0 &amp; -3 &amp; -3 &amp; | &amp; -7 \\
-0 &amp; 0 &amp; 6 &amp; | &amp; 10
-\end{bmatrix}
-\)</span></p>
-<p><strong>Langkah 3: Substitusi Balik</strong></p>
-<p>Sekarang kita akan menyelesaikan sistem persamaan dari bentuk segitiga atas ini.</p>
-<p>Dari Baris 3:</p>
-<div class="math notranslate nohighlight">
-\[
-6z = 10 \implies z = \frac{10}{6} = \frac{5}{3}
-\]</div>
-<p>Dari Baris 2:</p>
-<p><span class="math notranslate nohighlight">\(
--3y - 3z = -7 \implies -3y - 3\left(\frac{5}{3}\right) = -7 \implies -3y - 5 = -7 \implies -3y = -2 \implies y = \frac{2}{3}
-\)</span></p>
-<p>Dari Baris 1:</p>
-<p><span class="math notranslate nohighlight">\(
-x + 2y + z = 4 \implies x + 2\left(\frac{2}{3}\right) + \frac{5}{3} = 4
-\)</span></p>
-<p><span class="math notranslate nohighlight">\(
-x + \frac{4}{3} + \frac{5}{3} = 4 \implies x + 3 = 4 \implies x = 1
-\)</span></p>
-<p><strong>Solusi Akhir</strong></p>
-<p>Jadi, solusi dari sistem persamaan ini adalah:
-<span class="math notranslate nohighlight">\(
-x = 1, \quad y = \frac{2}{3}, \quad z = \frac{5}{3}
-\)</span></p>
-<p>Dengan demikian, garis yang berpotongan dengan ketiga persamaan tersebut adalah titik
-<span class="math notranslate nohighlight">\(
-(1, \frac{2}{3}, \frac{5}{3}) 
-\)</span></p>
 </section>
+<section id="definisi-matriks-invers">
+<h1><strong>Definisi Matriks Invers</strong><a class="headerlink" href="#definisi-matriks-invers" title="Link to this heading">#</a></h1>
+<p>Matriks invers adalah matriks yang ketika dikalikan dengan matriks asalnya menghasilkan matriks identitas.</p>
+<p>Matriks invers digunakan untuk menyelesaikan sistem persamaan linear, transformasi geometri dan tidak semua matriks memiliki invers, hanya matriks dengan determinannya tidak nol yang bisa dihitung inversnya.</p>
 <hr class="docutils" />
-<section id="penyelesaian-persamaan-linear-3-variabel-dengan-eliminasi-gauss">
-<h2>Penyelesaian Persamaan Linear 3 Variabel dengan Eliminasi Gauss<a class="headerlink" href="#penyelesaian-persamaan-linear-3-variabel-dengan-eliminasi-gauss" title="Link to this heading">#</a></h2>
-<p>Sebuah sistem persamaan linear dengan 3 variabel bisa memiliki:</p>
-<ol class="arabic simple">
-<li><p><strong>Satu solusi unik</strong> (sistem konsisten dan determinan matriks koefisien tidak nol).</p></li>
-<li><p><strong>Tak hingga banyak solusi</strong> (sistem konsisten tetapi terdapat variabel bebas).</p></li>
-<li><p><strong>Tanpa solusi</strong> (sistem tidak konsisten, terjadi kontradiksi).</p></li>
-</ol>
-<p>Kita akan melihat bagaimana Eliminasi Gauss membantu menentukan jenis solusi.</p>
-<hr class="docutils" />
-<p><strong>1. Contoh Sistem dengan Satu Solusi Unik</strong>
-Misalkan sistem persamaan:</p>
-<p><span class="math notranslate nohighlight">\(
-\begin{aligned}
-2x + y + z &amp;= 9 \\
-4x + 3y + 2z &amp;= 24 \\
-6x + 5y + 4z &amp;= 42
-\end{aligned}
-\)</span></p>
-<p><strong>Langkah 1: Tulis dalam bentuk matriks augmented</strong></p>
-<p><span class="math notranslate nohighlight">\(
-\begin{bmatrix}
-2 &amp; 1 &amp; 1 &amp; | 9 \\
-4 &amp; 3 &amp; 2 &amp; | 24 \\
-6 &amp; 5 &amp; 4 &amp; | 42
-\end{bmatrix}
-\)</span></p>
-<p><strong>Langkah 2: Ubah elemen pivot pertama menjadi 1</strong> (bagi baris pertama dengan 2)</p>
-<p><span class="math notranslate nohighlight">\(
-\begin{bmatrix}
-1 &amp; 0.5 &amp; 0.5 &amp; | 4.5 \\
-4 &amp; 3 &amp; 2 &amp; | 24 \\
-6 &amp; 5 &amp; 4 &amp; | 42
-\end{bmatrix}
-\)</span></p>
-<p><strong>Langkah 3: Nolkan elemen di bawah pivot pertama</strong></p>
+</section>
+<section id="tugas-mencari-matriks-invers">
+<h1><strong>Tugas mencari matriks invers</strong><a class="headerlink" href="#tugas-mencari-matriks-invers" title="Link to this heading">#</a></h1>
+<section id="menyusun-sistem-persamaan-dalam-bentuk-matriks">
+<h2><strong>1. Menyusun Sistem Persamaan dalam Bentuk Matriks</strong><a class="headerlink" href="#menyusun-sistem-persamaan-dalam-bentuk-matriks" title="Link to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\begin{align*}
-R_2 &amp;\to R_2 - 4R_1 \\
-R_3 &amp;\to R_3 - 6R_1
-\end{align*}
+\begin{aligned}  
+7x_1 - 4x_2 + 3x_3 &amp;= 5 \\  
+2x_1 + 5x_2 - 6x_3 &amp;= 7 \\  
+-3x_1 + 8x_2 + x_3 &amp;= 3  
+\end{aligned}
 \end{split}\]</div>
-<p><span class="math notranslate nohighlight">\(
-\begin{bmatrix}
-1 &amp; 0.5 &amp; 0.5 &amp; | 4.5 \\
-0 &amp; 1 &amp; 0 &amp; | 6 \\
-0 &amp; 2 &amp; 1 &amp; | 15
-\end{bmatrix}
-\)</span></p>
-<p><strong>Langkah 4: Nolkan elemen di bawah pivot kedua</strong></p>
+<p>Sistem persamaan ini dapat ditulis dalam bentuk matriks sebagai:</p>
 <div class="math notranslate nohighlight">
 \[
-\begin{align*}
-R_3 &amp;\to R_3 - 2R_2
-\end{align*}
+A x = b
 \]</div>
-<p><span class="math notranslate nohighlight">\(
-\begin{bmatrix}
-1 &amp; 0.5 &amp; 0.5 &amp; | 4.5 \\
-0 &amp; 1 &amp; 0 &amp; | 6 \\
-0 &amp; 0 &amp; 1 &amp; | 3
+<p>dengan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = 
+\begin{bmatrix}  
+7 &amp; -4 &amp; 3 \\  
+2 &amp; 5 &amp; -6 \\  
+-3 &amp; 8 &amp; 1  
 \end{bmatrix}
-\)</span></p>
-<p><strong>Langkah 5: Substitusi balik</strong></p>
-<ul class="simple">
-<li><p>( z = 3 )</p></li>
-<li><p>( y = 6 )</p></li>
-<li><p><span class="math notranslate nohighlight">\(( x + 0.5(6) + 0.5(3) = 4.5 \Rightarrow x = 0 )\)</span></p></li>
-</ul>
-<p><strong>Kesimpulan:</strong> ( (x, y, z) = (0,6,3) ) adalah <strong>solusi unik</strong>.</p>
-<iframe src="https://www.geogebra.org/3d/ehvxgmkw"
-width="800" height="600" style="border:0;"></iframe>
+\end{split}\]</div>
+<p>adalah matriks koefisien,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x = 
+\begin{bmatrix}  
+x_1 \\  
+x_2 \\  
+x_3  
+\end{bmatrix}
+\end{split}\]</div>
+<p>adalah vektor variabel, dan</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+b = 
+\begin{bmatrix}  
+5 \\  
+7 \\  
+3  
+\end{bmatrix}
+\end{split}\]</div>
+<p>adalah vektor hasil.</p>
+</section>
+<section id="mencari-matriks-invers-a-1">
+<h2><strong>2. Mencari Matriks Invers <span class="math notranslate nohighlight">\( A^-1 \)</span></strong><a class="headerlink" href="#mencari-matriks-invers-a-1" title="Link to this heading">#</a></h2>
+<p>Untuk menyelesaikan sistem ini menggunakan metode matriks invers, kita harus mencari <span class="math notranslate nohighlight">\( A^{-1} \)</span> sehingga:</p>
+<div class="math notranslate nohighlight">
+\[
+x = A^{-1} b
+\]</div>
+<p>Misalkan hasil perhitungan invers dari ( A ) adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^{-1} =
+\begin{bmatrix}  
+\frac{7}{15} &amp; \frac{-4}{15} &amp; \frac{3}{15} \\  
+\frac{2}{15} &amp; \frac{5}{15} &amp; \frac{-6}{15} \\  
+\frac{-3}{15} &amp; \frac{8}{15} &amp; \frac{1}{15}  
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="mengalikan-matriks-invers">
+<h2><strong>3. Mengalikan Matriks Invers</strong><a class="headerlink" href="#mengalikan-matriks-invers" title="Link to this heading">#</a></h2>
+<p>Sekarang kita kalikan ( A^{-1} ) dengan ( b ):</p>
+<div class="math notranslate nohighlight">
+\[
+x = A^{-1} b
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}  
+\frac{7}{15} &amp; \frac{-4}{15} &amp; \frac{3}{15} \\  
+\frac{2}{15} &amp; \frac{5}{15} &amp; \frac{-6}{15} \\  
+\frac{-3}{15} &amp; \frac{8}{15} &amp; \frac{1}{15}  
+\end{bmatrix}
+\begin{bmatrix}  
+5 \\  
+7 \\  
+3  
+\end{bmatrix}
+\end{split}\]</div>
+<p>Lakukan perkalian baris dengan kolom:</p>
+<div class="math notranslate nohighlight">
+\[
+x_1 = \left( \frac{7}{15} \times 5 \right) + \left( \frac{-4}{15} \times 7 \right) + \left( \frac{3}{15} \times 3 \right)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= \frac{35}{15} - \frac{28}{15} + \frac{9}{15} = \frac{16}{15} \approx 1.067
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+x_2 = \left( \frac{2}{15} \times 5 \right) + \left( \frac{5}{15} \times 7 \right) + \left( \frac{-6}{15} \times 3 \right)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= \frac{10}{15} + \frac{35}{15} - \frac{18}{15} = \frac{27}{15} \approx 0.067
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+x_3 = \left( \frac{-3}{15} \times 5 \right) + \left( \frac{8}{15} \times 7 \right) + \left( \frac{1}{15} \times 3 \right)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= \frac{-15}{15} + \frac{56}{15} + \frac{3}{15} = \frac{44}{15} \approx 0.467
+\]</div>
+<p>Sehingga solusi sistem adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x =
+\begin{bmatrix}  
+\frac{16}{15} \\  
+\frac{27}{15} \\  
+\frac{44}{15}  
+\end{bmatrix}
+\approx
+\begin{bmatrix}  
+1.067 \\  
+0.067 \\  
+0.467  
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="hasil-akhir">
+<h2><strong>4. Hasil Akhir</strong><a class="headerlink" href="#hasil-akhir" title="Link to this heading">#</a></h2>
+<p>Hasil akhir dari perhitungan adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x =
+\begin{bmatrix}  
+1.067 \\  
+0.067 \\  
+0.467  
+\end{bmatrix}
+\end{split}\]</div>
+<p>Jika dibulatkan ke bilangan bulat terdekat:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x =
+\begin{bmatrix}  
+1 \\  
+0 \\  
+0  
+\end{bmatrix}
+\end{split}\]</div>
+<p>Sehingga solusi sistem adalah :
+$<span class="math notranslate nohighlight">\(
+x_1 = 1, \quad x_2 = 0, \quad x_3 = 0
+\)</span>$</p>
 <hr class="docutils" />
-<p><strong>2. Contoh Sistem dengan Tak Hingga Banyak Solusi</strong></p>
-<p>Misalkan sistem:</p>
-<p><span class="math notranslate nohighlight">\(
-\begin{aligned}
-x + y + z &amp;= 6 \\
-2x + 2y + 2z &amp;= 12 \\
-3x + 3y + 3z &amp;= 18
-\end{aligned}
-\)</span></p>
-<p><strong>Langkah 1: Tulis dalam bentuk matriks augmented</strong></p>
-<p><span class="math notranslate nohighlight">\(
-\begin{bmatrix}
-1 &amp; 1 &amp; 1 &amp; | 6 \\
-2 &amp; 2 &amp; 2 &amp; | 12 \\
-3 &amp; 3 &amp; 3 &amp; | 18
-\end{bmatrix}
-\)</span></p>
-<p><strong>Langkah 2: Nolkan elemen di bawah pivot pertama</strong></p>
-<p><span class="math notranslate nohighlight">\(
-\begin{aligned}
-R_2 &amp;\rightarrow R_2 - 2R_1 \\
-R_3 &amp;\rightarrow R_3 - 3R_1
-\end{aligned}
-\)</span></p>
-<p><span class="math notranslate nohighlight">\(
-\begin{bmatrix}
-1 &amp; 1 &amp; 1 &amp; | 6 \\
-0 &amp; 0 &amp; 0 &amp; | 0 \\
-0 &amp; 0 &amp; 0 &amp; | 0
-\end{bmatrix}
-\)</span></p>
-<p><strong>Langkah 3: Interpretasi Hasil</strong></p>
-<ul class="simple">
-<li><p>Baris kedua dan ketiga hanya berisi nol, sehingga ada <strong>variabel bebas</strong>.</p></li>
-<li><p>Kita bisa menulis:</p>
-<ul>
-<li><p>( x + y + z = 6 )</p></li>
-<li><p>Pilih  z = t , maka y = 6 - x - t</p></li>
-</ul>
-</li>
-</ul>
-<p><strong>Kesimpulan:</strong> Sistem memiliki <strong>tak hingga banyak solusi</strong>, karena terdapat <strong>satu variabel bebas</strong>.</p>
-<iframe src="https://www.geogebra.org/3d/mu9nbhn9"
-width="800" height="600" style="border:0;"></iframe>
-<hr class="docutils" />
-<p><strong>3. Contoh Sistem dengan Tanpa Solusi</strong></p>
-<p>Mari kita analisis sistem persamaan linear yang diberikan:</p>
-<p><span class="math notranslate nohighlight">\(
-\begin{aligned}
-x + y + z &amp;= 3 \\
-2x + 2y + 2z &amp;= 10 \\
-2x + 2y + 2z &amp;= 15
-\end{aligned}
-\)</span></p>
-<p><strong>Langkah 1: Representasi Matriks Augmented</strong></p>
-<p>Kita bisa menuliskan sistem ini dalam bentuk matriks:</p>
-<p><span class="math notranslate nohighlight">\(
-\begin{bmatrix} 
-1 &amp; 1 &amp; 1 &amp; | 3 \\ 
-2 &amp; 2 &amp; 2 &amp; | 10 \\ 
-2 &amp; 2 &amp; 2 &amp; | 15 
-\end{bmatrix}
-\)</span></p>
-<p><strong>Langkah 2: Eliminasi Gauss</strong></p>
-<ul class="simple">
-<li><p>Baris 2 → Baris 2 - 2 × Baris 1</p></li>
-<li><p>Baris 3 → Baris 3 - 2 × Baris 1</p></li>
-</ul>
-<p>Maka:</p>
-<p><span class="math notranslate nohighlight">\(
-\begin{bmatrix} 
-1 &amp; 1 &amp; 1 &amp; | 3 \\ 
-0 &amp; 0 &amp; 0 &amp; | 4 \\ 
-0 &amp; 0 &amp; 0 &amp; | 9 
-\end{bmatrix}
-\)</span></p>
-<p><strong>Langkah 3: Analisis Hasil</strong></p>
-<p>Baris kedua dan ketiga menghasilkan:</p>
-<p><span class="math notranslate nohighlight">\(
-0 = 4 \quad \text{(kontradiksi)}
-\
-\
-0 = 9 \quad \text{(kontradiksi)}
-\)</span></p>
-<p>Pernyataan ini <strong>tidak mungkin benar</strong>, sehingga sistem persamaan ini <strong>tidak memiliki solusi</strong> (inkonsisten).</p>
-<p><strong>Kesimpulan</strong>
-Sistem ini <strong>tidak memiliki solusi</strong> karena baris terakhir mengandung pertidaksamaan yang mustahil ((0 = 9)). Artinya, tidak ada nilai ( x, y, z ) yang dapat memenuhi semua persamaan sekaligus.</p>
-<iframe src="https://www.geogebra.org/3d/y6ywzpq5"width="800" height="600" style="border:0;"></iframe>
-<hr class="docutils" />
-<p><strong>Kesimpulan Umum</strong></p>
-<ul class="simple">
-<li><p><strong>Satu solusi unik</strong> terjadi jika setelah eliminasi Gauss, matriks menjadi <strong>segitiga atas dengan diagonal utama tidak nol</strong>.</p></li>
-<li><p><strong>Tak hingga banyak solusi</strong> terjadi jika terdapat <strong>variabel bebas</strong> dalam matriks yang menghasilkan satu atau lebih parameter bebas.</p></li>
-<li><p><strong>Tanpa solusi</strong> terjadi jika ada <strong>baris dengan semua elemen nol tetapi nilai konstanta tidak nol</strong>, yang berarti ada kontradiksi dalam sistem.</p></li>
-</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} =
+\begin{bmatrix} \frac{7}{15} &amp; -\frac{4}{15} &amp; \frac{3}{15} \\ \frac{2}{15} &amp; \frac{5}{15} &amp; -\frac{6}{15} \\ -\frac{3}{15} &amp; \frac{8}{15} &amp; \frac{1}{15} \end{bmatrix}
+\begin{bmatrix} 5 \\ 7 \\ 3 \end{bmatrix}=
+\begin{bmatrix} 1.067 \\ 0.067 \\ 0.467 \end{bmatrix}=
+\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}\end{split}\]</div>
 </section>
 </section>
 
@@ -685,24 +604,6 @@ Sistem ini <strong>tidak memiliki solusi</strong> karena baris terakhir mengandu
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="markdown.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="markdown-notebooks.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -719,9 +620,17 @@ Sistem ini <strong>tidak memiliki solusi</strong> karena baris terakhir mengandu
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-eliminasi-gauss">Sistem Eliminasi Gauss</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-persamaan-linear-3-variabel-dengan-eliminasi-gauss">Penyelesaian Persamaan Linear 3 Variabel dengan Eliminasi Gauss</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Matriks Invers</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-matriks-invers"><strong>Definisi Matriks Invers</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-mencari-matriks-invers"><strong>Tugas mencari matriks invers</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menyusun-sistem-persamaan-dalam-bentuk-matriks"><strong>1. Menyusun Sistem Persamaan dalam Bentuk Matriks</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-matriks-invers-a-1"><strong>2. Mencari Matriks Invers <span class="math notranslate nohighlight">\( A^-1 \)</span></strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengalikan-matriks-invers"><strong>3. Mengalikan Matriks Invers</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akhir"><strong>4. Hasil Akhir</strong></a></li>
 </ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
