@@ -408,8 +408,8 @@ document.write(`
 </li>
 </ul>
 <p>Transformasi Matriks yaitu bagaimana matriks dapat digunakan untuk mengubah satu vektor menjadi vektor lainnya.
-Dengan menggunakan matriks <span class="math notranslate nohighlight">\(A\)</span> berukuran <span class="math notranslate nohighlight">\(m\)</span> X <span class="math notranslate nohighlight">\(n\)</span> bisa digunakan untuk mendefinisikan sebuah fungsi <span class="math notranslate nohighlight">\(T\)</span> yang mengambil vektor kolom <span class="math notranslate nohighlight">\(\vec{x}\)</span> adalah vektor kolom berukuran <span class="math notranslate nohighlight">\(n \times 1\)</span> dan menghasilkan vektor kolom <span class="math notranslate nohighlight">\(\vec{y}\)</span> berukuran <span class="math notranslate nohighlight">\(m \times 1\)</span> melalui persamaan:
-<span class="math notranslate nohighlight">\(
+Dengan menggunakan matriks <span class="math notranslate nohighlight">\(A\)</span> berukuran <span class="math notranslate nohighlight">\(m\)</span> X <span class="math notranslate nohighlight">\(n\)</span> bisa digunakan untuk mendefinisikan sebuah fungsi <span class="math notranslate nohighlight">\(T\)</span> yang mengambil vektor kolom <span class="math notranslate nohighlight">\(\vec{x}\)</span> adalah vektor kolom berukuran <span class="math notranslate nohighlight">\(n \times 1\)</span> dan menghasilkan vektor kolom <span class="math notranslate nohighlight">\(\vec{y}\)</span> berukuran <span class="math notranslate nohighlight">\(m \times 1\)</span> melalui persamaan:</p>
+<p><span class="math notranslate nohighlight">\(
 \vec{y} = T(\vec{x}) = A\vec{x}
 \)</span></p>
 <p>Fungsi ini disebut <strong>Transformasi Matriks</strong>, dan termasuk dalam kelas umum yang biasanya disebut <strong>Transformasi Linier</strong> yaitu fungsi antar vektor</p>
@@ -474,8 +474,8 @@ A = \begin{bmatrix}
 1
 \end{bmatrix}
 \)</span></p>
-<p>Sketsa: <span class="math notranslate nohighlight">\(\vec{x} + \vec{y}\)</span>,<span class="math notranslate nohighlight">\(A\vec{x}\)</span>,<span class="math notranslate nohighlight">\(A\vec{y}\)</span> dan <span class="math notranslate nohighlight">\(A(\vec{x}+\vec{y})\)</span>
-langkah ini bertujuan untuk melihat bagaimana penjumlahan vektor berinteraksi dengan transformasi matriks.</p>
+<p>Sketsa: <span class="math notranslate nohighlight">\(\vec{x} + \vec{y}\)</span>,<span class="math notranslate nohighlight">\(A\vec{x}\)</span>,<span class="math notranslate nohighlight">\(A\vec{y}\)</span> dan <span class="math notranslate nohighlight">\(A(\vec{x}+\vec{y})\)</span></p>
+<p>langkah ini bertujuan untuk melihat bagaimana penjumlahan vektor berinteraksi dengan transformasi matriks.</p>
 <p>Dihitung:</p>
 <p><span class="math notranslate nohighlight">\(
 \vec{x} + \vec{y} = \begin{bmatrix}
@@ -495,7 +495,7 @@ A(\vec{x} + \vec{y}) = \begin{bmatrix}
 5
 \end{bmatrix}
 \)</span></p>
-<p>Ini menunjukkan <strong>sifat distributif</strong> dari perkalian matriks terhadap penjumlahan vektor: $<span class="math notranslate nohighlight">\(A(\vec{x} + \vec{y}) = A\vec{x} + A\vec{y}\)</span>$</p>
+<p>Ini menunjukkan <strong>sifat distributif</strong> dari perkalian matriks terhadap penjumlahan vektor: <span class="math notranslate nohighlight">\(A(\vec{x} + \vec{y}) = A\vec{x} + A\vec{y}\)</span></p>
 <hr class="docutils" />
 <ul>
 <li><h5 class="rubric" id="menggambar-efek-dari-perkalian-matriks"><strong>Menggambar Efek dari Perkalian matriks</strong></h5>
@@ -547,7 +547,7 @@ A\vec{z} = \begin{bmatrix}
 <li><h5 class="rubric" id="visualisasi-transformasi-matriks-menggunnakan-vektor"><strong>Visualisasi Transformasi Matriks Menggunnakan vektor</strong></h5>
 </li>
 </ul>
-<p>efek transformasi terhadap seluruh bidang Kartesius dengan melihat bagaimana <strong>persegi satuan (unit square)</strong> berubah.
+<p>Efek transformasi terhadap seluruh bidang Kartesius dengan melihat bagaimana <strong>persegi satuan (unit square)</strong> berubah.
 Misalkan:</p>
 <p><span class="math notranslate nohighlight">\(
 A = \begin{bmatrix}
@@ -594,8 +594,8 @@ A = \begin{bmatrix}
 \end{bmatrix}
 \)</span></p>
 <p>Adapun tips cepat untuk menggunakan matriks kolom:
-Buat matriks <span class="math notranslate nohighlight">\(B\)</span> yang kolom - kolomnya adalah titik - titik sudut:
-<span class="math notranslate nohighlight">\(
+Buat matriks <span class="math notranslate nohighlight">\(B\)</span> yang kolom - kolomnya adalah titik - titik sudut:</p>
+<p><span class="math notranslate nohighlight">\(
 B = \begin{bmatrix}
 0 &amp; 1 &amp; 1 &amp; 0 \\
 0 &amp; 0 &amp; 1 &amp; 1
@@ -607,20 +607,18 @@ AB = \begin{bmatrix}
 0 &amp; 2 &amp; 6 &amp; 4 \\
 0 &amp; 1 &amp; 4 &amp; 3
 \end{bmatrix}
-\)</span>
-Proses ini cepat jika harus dilakukan transformasi pada banyak titik sekaligus.</p>
+\)</span></p>
+<p>Proses ini cepat jika harus dilakukan transformasi pada banyak titik sekaligus.</p>
 <hr class="docutils" />
 <ul>
 <li><h5 class="rubric" id="transformasi-matriks-terhadap-sebuah-wilayah"><strong>Transformasi Matriks terhadap sebuah wilayah</strong></h5>
 </li>
 </ul>
 <p>Matriks yang digunakan:</p>
-<p><span class="math notranslate nohighlight">\(
-A = \begin{bmatrix}
+<p><span class="math notranslate nohighlight">\(A = \begin{bmatrix}
 0 &amp; -1 \\
 1 &amp; 0
-\end{bmatrix}
-\)</span></p>
+\end{bmatrix}\)</span></p>
 <p>Matriks ini merupakan rotasi 90 derajat berlawanan arah jarum jam terhadap titik asal (0,0) dalam bidang kartesius.
 Contoh diberikan dengan menggunakan matriks:</p>
 <p><span class="math notranslate nohighlight">\(
@@ -629,8 +627,8 @@ a &amp; b \\
 c &amp; d
 \end{bmatrix}
 \)</span></p>
-<p>hasil perkalian:
-<span class="math notranslate nohighlight">\(
+<p>hasil perkalian:</p>
+<p><span class="math notranslate nohighlight">\(
 A\vec{e_1} = \begin{bmatrix}
 a \\ c
 \end{bmatrix} \quad
@@ -647,57 +645,57 @@ a \\ c
 <p>Beberapa transformasi umum dan matriksnya:</p>
 <ul class="simple">
 <li><p>Vertical Stretch:
-$<span class="math notranslate nohighlight">\(
-\begin{bmatrix}1 &amp; 0 \\0 &amp; k\end{bmatrix}\)</span>$</p></li>
+<span class="math notranslate nohighlight">\(
+\begin{bmatrix}1 &amp; 0 \\0 &amp; k\end{bmatrix}\)</span></p></li>
 <li><p>Horizontal Shear:
-$<span class="math notranslate nohighlight">\(
+<span class="math notranslate nohighlight">\(
 \begin{bmatrix}
 1 &amp; k \\
 0 &amp; 1
 \end{bmatrix}
-\)</span>$</p></li>
+\)</span></p></li>
 <li><p>Vertical Shear:
-$<span class="math notranslate nohighlight">\(
+<span class="math notranslate nohighlight">\(
 \begin{bmatrix}
 1 &amp; 0 \\
 k &amp; 1
 \end{bmatrix}
-\)</span>$</p></li>
+\)</span></p></li>
 <li><p>Horizontal Reflection (sumbu <span class="math notranslate nohighlight">\(y\)</span>):
-$<span class="math notranslate nohighlight">\(
+<span class="math notranslate nohighlight">\(
 \begin{bmatrix}
 -1 &amp; 0 \\
 0 &amp; 1
 \end{bmatrix}
-\)</span>$</p></li>
+\)</span></p></li>
 <li><p>Vertical Reflection (sumbu <span class="math notranslate nohighlight">\(x\)</span>):
-$<span class="math notranslate nohighlight">\(
+<span class="math notranslate nohighlight">\(
 \begin{bmatrix}
 1 &amp; 0 \\
 0 &amp; -1
 \end{bmatrix}
-\)</span>$</p></li>
+\)</span></p></li>
 <li><p>Refleksi Diagonal (<span class="math notranslate nohighlight">\(y = x\)</span>):
-$<span class="math notranslate nohighlight">\(
+<span class="math notranslate nohighlight">\(
 \begin{bmatrix}
 0 &amp; 1 \\
 1 &amp; 0
 \end{bmatrix}
-\)</span>$</p></li>
+\)</span></p></li>
 <li><p>Rotasi sebesar sudut <span class="math notranslate nohighlight">\(\theta\)</span>:
-$<span class="math notranslate nohighlight">\(
+<span class="math notranslate nohighlight">\(
 \begin{bmatrix}
 \cos \theta &amp; -\sin \theta \\
 \sin \theta &amp; \cos \theta
 \end{bmatrix}
-\)</span>$</p></li>
+\)</span></p></li>
 <li><p>Proyeksi ke sumbu <span class="math notranslate nohighlight">\(x\)</span>:
-$<span class="math notranslate nohighlight">\(
+<span class="math notranslate nohighlight">\(
 \begin{bmatrix}
 1 &amp; 0 \\
 0 &amp; 0
 \end{bmatrix}
-\)</span>$</p></li>
+\)</span></p></li>
 </ul>
 <hr class="docutils" />
 </section>
