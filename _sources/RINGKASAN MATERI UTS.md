@@ -283,28 +283,51 @@ dapat dilihat bahwa kolom pertama dan kedua dari $𝐴$ menentukan ke mana titik
 Beberapa transformasi umum dan matriksnya:
 
 * Vertical Stretch:
-$$\begin{bmatrix}1 & 0 \\0 & k\end{bmatrix}$$
+
+$$
+\begin{bmatrix}1 & 0 \\0 & k\end{bmatrix}
+$$
 
 * Horizontal Shear:
-$$\begin{bmatrix}1 & k \\0 & 1\end{bmatrix}$$
+
+$$
+\begin{bmatrix}1 & k \\0 & 1\end{bmatrix}
+$$
 
 * Vertical Shear:
-$$\begin{bmatrix}1 & 0 \\k & 1\end{bmatrix}$$
+$$
+\begin{bmatrix}1 & 0 \\k & 1\end{bmatrix}
+$$
 
 * Horizontal Reflection (sumbu $y$):
-$$\begin{bmatrix}-1 & 0 \\0 & 1\end{bmatrix}$$
+
+$$
+\begin{bmatrix}-1 & 0 \\0 & 1\end{bmatrix}
+$$
 
 * Vertical Reflection (sumbu $x$):
-$$\begin{bmatrix}1 & 0 \\0 & -1\end{bmatrix}$$
+
+$$
+\begin{bmatrix}1 & 0 \\0 & -1\end{bmatrix}
+$$
 
 * Refleksi Diagonal ($y = x$):
-$$\begin{bmatrix}0 & 1 \\1 & 0\end{bmatrix}$$
+
+$$
+\begin{bmatrix}0 & 1 \\1 & 0\end{bmatrix}
+$$
 
 * Rotasi sebesar sudut $\theta$:
-$$\begin{bmatrix}\cos \theta & -\sin \theta \\\sin \theta & \cos \theta\end{bmatrix}$$
+
+$$
+\begin{bmatrix}\cos \theta & -\sin \theta \\\sin \theta & \cos \theta\end{bmatrix}
+$$
 
 * Proyeksi ke sumbu $x$:
-$$\begin{bmatrix}1 & 0 \\0 & 0\end{bmatrix}$$
+
+$$
+\begin{bmatrix}1 & 0 \\0 & 0\end{bmatrix}
+$$
 
 ---
 ### TUGAS
