@@ -1,8 +1,9 @@
-## **RINGKASAN DAN TUGAS (Transformasi Matriks) **
+## RINGKASAN DAN TUGAS (Transformasi Matriks) 
 
-* ##### Transformasi Matriks
+* ##### **Transformasi Matriks**
 Transformasi Matriks yaitu bagaimana matriks dapat digunakan untuk mengubah satu vektor menjadi vektor lainnya. 
 Dengan menggunakan matriks $A$ berukuran $m$ X $n$ bisa digunakan untuk mendefinisikan sebuah fungsi $T$ yang mengambil vektor kolom $\vec{x}$ adalah vektor kolom berukuran $n \times 1$ dan menghasilkan vektor kolom $\vec{y}$ berukuran $m \times 1$ melalui persamaan:
+
 $$
 \vec{y} = T(\vec{x}) = A\vec{x}
 $$
@@ -11,7 +12,7 @@ Fungsi ini disebut **Transformasi Matriks**, dan termasuk dalam kelas umum yang 
 
 ---
 
-* ##### Perkalian Matriks - Vektor
+* ##### **Perkalian Matriks - Vektor**
 
 Agar hasil perkalian tetap berupa vektor  2D $(\ \mathbb{R}^2)$, maka matriks $A$ harus berukuran $2$ X $2$. 
 Diberikan matriks $A$ dan tiga vektor $\vec{x},\ \vec{y},\ \vec{z}$ hasil perkalian antara matriks dan vektor dihitung sebagai berikut:
@@ -56,7 +57,7 @@ Perkalian matriks mengubah panjang dan arah vektor dalam contoh di atas vektor $
 
 ---
 
-* ##### Menggabungkan penjumlahan dan perkalian matriks
+* ##### **Menggabungkan penjumlahan dan perkalian matriks**
 
 Diketahui:
 
@@ -104,7 +105,7 @@ Ini menunjukkan **sifat distributif** dari perkalian matriks terhadap penjumlaha
 
 ---
 
-* ##### Menggambar Efek dari Perkalian matriks
+* ##### **Menggambar Efek dari Perkalian matriks**
 
 Diketahui:
 
@@ -148,13 +149,13 @@ Beberapa vektor seperti $(\vec{x}$ dan $\vec{y})$ setelah dikalikan dengan matri
 
 ---
 
-* ##### Transformasi terhadap bidang kartesius
+* ##### **Transformasi terhadap bidang kartesius**
 
 Pada bagian ini memeperkenalkan transisi dan menggambarkan vektor satu per satu ke menggambarkan bagaimana seluruh bidang katresius $(\mathbb{R}^2)$berubah oleh matriks.
 
 ___
 
-* ##### Visualisasi Transformasi Matriks Menggunnakan vektor
+* ##### **Visualisasi Transformasi Matriks Menggunnakan vektor**
 
 efek transformasi terhadap seluruh bidang Kartesius dengan melihat bagaimana **persegi satuan (unit square)** berubah.
 Misalkan: 
@@ -242,7 +243,7 @@ Menghasilkan persegi berubah menjadi jajargenjang. Selain merenggang, bentuknya 
 ![Cuplikan layar 2025-04-13 200922](https://hackmd.io/_uploads/rJGzYNYR1x.png)
 menggambarkan bahwa garis-garis lurus pada persegi satuan tetap lurus setelah transformasi oleh matriks, meskipun bentuknya berubah.
 
-* ##### Transformasi Matriks terhadap sebuah wilayah
+* ##### **Transformasi Matriks terhadap sebuah wilayah**
 
 Matriks yang digunakan: 
 
@@ -278,7 +279,7 @@ dapat dilihat bahwa kolom pertama dan kedua dari $𝐴$ menentukan ke mana titik
 
 ---
 
-* ##### Macam - macam Transformasi umum
+* ##### **Macam - macam Transformasi umum**
 Beberapa transformasi umum dan matriksnya:
 
 * Vertical Stretch:
@@ -308,7 +309,7 @@ $$\begin{bmatrix}1 & 0 \\0 & 0\end{bmatrix}$$
 ---
 ### TUGAS
 
-### **SOAL 1**
+#### **SOAL 1**
 Diketahui : 
 
 $$
@@ -357,7 +358,7 @@ $$
 
 ---
 
-### **SOAL 2**
+#### **SOAL 2**
 
 Diketahui:
 
@@ -391,7 +392,7 @@ $$
 
 ---
 
-### **SOAL 5**
+#### **SOAL 5**
 
 ![Cuplikan layar 2025-04-11 105341](https://hackmd.io/_uploads/rJFPMzLRyx.png)
 
@@ -410,7 +411,7 @@ $$
 
 ---
 
-### **SOAL 6**
+#### **SOAL 6**
 
 ![Cuplikan layar 2025-04-11 105349](https://hackmd.io/_uploads/SyG2VGL0ye.png)
 

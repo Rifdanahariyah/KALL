@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>**RINGKASAN DAN TUGAS (Transformasi Matriks) ** &#8212; My sample book</title>
+    <title>RINGKASAN DAN TUGAS (Transformasi Matriks) &#8212; My sample book</title>
   
   
   
@@ -184,7 +184,7 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Sistem Persamaan Linier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks2.html"><strong>Matriks Invers</strong></a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">**RINGKASAN DAN TUGAS (Transformasi Matriks) **</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">RINGKASAN DAN TUGAS (Transformasi Matriks)</a></li>
 </ul>
 
     </div>
@@ -370,7 +370,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>**RINGKASAN DAN TUGAS (Transformasi Matriks) **</h1>
+    <h1>RINGKASAN DAN TUGAS (Transformasi Matriks)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -380,11 +380,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas">TUGAS</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1"><strong>SOAL 1</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-2"><strong>SOAL 2</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-5"><strong>SOAL 5</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-6"><strong>SOAL 6</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas">TUGAS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1"><strong>SOAL 1</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-2"><strong>SOAL 2</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-5"><strong>SOAL 5</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-6"><strong>SOAL 6</strong></a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -397,20 +399,21 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="ringkasan-dan-tugas-transformasi-matriks">
-<h1>**RINGKASAN DAN TUGAS (Transformasi Matriks) **<a class="headerlink" href="#ringkasan-dan-tugas-transformasi-matriks" title="Link to this heading">#</a></h1>
+<h1>RINGKASAN DAN TUGAS (Transformasi Matriks)<a class="headerlink" href="#ringkasan-dan-tugas-transformasi-matriks" title="Link to this heading">#</a></h1>
 <ul>
-<li><h5 class="rubric" id="transformasi-matriks">Transformasi Matriks</h5>
+<li><h5 class="rubric" id="transformasi-matriks"><strong>Transformasi Matriks</strong></h5>
 </li>
 </ul>
 <p>Transformasi Matriks yaitu bagaimana matriks dapat digunakan untuk mengubah satu vektor menjadi vektor lainnya.
-Dengan menggunakan matriks <span class="math notranslate nohighlight">\(A\)</span> berukuran <span class="math notranslate nohighlight">\(m\)</span> X <span class="math notranslate nohighlight">\(n\)</span> bisa digunakan untuk mendefinisikan sebuah fungsi <span class="math notranslate nohighlight">\(T\)</span> yang mengambil vektor kolom <span class="math notranslate nohighlight">\(\vec{x}\)</span> adalah vektor kolom berukuran <span class="math notranslate nohighlight">\(n \times 1\)</span> dan menghasilkan vektor kolom <span class="math notranslate nohighlight">\(\vec{y}\)</span> berukuran <span class="math notranslate nohighlight">\(m \times 1\)</span> melalui persamaan:
-$<span class="math notranslate nohighlight">\(
+Dengan menggunakan matriks <span class="math notranslate nohighlight">\(A\)</span> berukuran <span class="math notranslate nohighlight">\(m\)</span> X <span class="math notranslate nohighlight">\(n\)</span> bisa digunakan untuk mendefinisikan sebuah fungsi <span class="math notranslate nohighlight">\(T\)</span> yang mengambil vektor kolom <span class="math notranslate nohighlight">\(\vec{x}\)</span> adalah vektor kolom berukuran <span class="math notranslate nohighlight">\(n \times 1\)</span> dan menghasilkan vektor kolom <span class="math notranslate nohighlight">\(\vec{y}\)</span> berukuran <span class="math notranslate nohighlight">\(m \times 1\)</span> melalui persamaan:</p>
+<div class="math notranslate nohighlight">
+\[
 \vec{y} = T(\vec{x}) = A\vec{x}
-\)</span>$</p>
+\]</div>
 <p>Fungsi ini disebut <strong>Transformasi Matriks</strong>, dan termasuk dalam kelas umum yang biasanya disebut <strong>Transformasi Linier</strong> yaitu fungsi antar vektor</p>
 <hr class="docutils" />
 <ul>
-<li><h5 class="rubric" id="perkalian-matriks-vektor">Perkalian Matriks - Vektor</h5>
+<li><h5 class="rubric" id="perkalian-matriks-vektor"><strong>Perkalian Matriks - Vektor</strong></h5>
 </li>
 </ul>
 <p>Agar hasil perkalian tetap berupa vektor  2D <span class="math notranslate nohighlight">\((\ \mathbb{R}^2)\)</span>, maka matriks <span class="math notranslate nohighlight">\(A\)</span> harus berukuran <span class="math notranslate nohighlight">\(2\)</span> X <span class="math notranslate nohighlight">\(2\)</span>.
@@ -453,7 +456,7 @@ A\vec{z} = \begin{bmatrix}
 <p>Perkalian matriks mengubah panjang dan arah vektor dalam contoh di atas vektor <span class="math notranslate nohighlight">\(\vec{x}\)</span> dan <span class="math notranslate nohighlight">\(A\vec{x}\)</span> memiliki arah yang sama tapi panjangnya yang berubah. Namun, <span class="math notranslate nohighlight">\(\vec{y}\)</span> dan <span class="math notranslate nohighlight">\(\vec{z}\)</span> beruubah arah saat dikalikan dengan <span class="math notranslate nohighlight">\(A\)</span>. Hal ini menunjukkan bahwa matriks bertindak secara berbeda terhadap vektor yang berbeda.</p>
 <hr class="docutils" />
 <ul>
-<li><h5 class="rubric" id="menggabungkan-penjumlahan-dan-perkalian-matriks">Menggabungkan penjumlahan dan perkalian matriks</h5>
+<li><h5 class="rubric" id="menggabungkan-penjumlahan-dan-perkalian-matriks"><strong>Menggabungkan penjumlahan dan perkalian matriks</strong></h5>
 </li>
 </ul>
 <p>Diketahui:</p>
@@ -497,7 +500,7 @@ A(\vec{x} + \vec{y}) = \begin{bmatrix}
 <p>Ini menunjukkan <strong>sifat distributif</strong> dari perkalian matriks terhadap penjumlahan vektor: $<span class="math notranslate nohighlight">\(A(\vec{x} + \vec{y}) = A\vec{x} + A\vec{y}\)</span>$</p>
 <hr class="docutils" />
 <ul>
-<li><h5 class="rubric" id="menggambar-efek-dari-perkalian-matriks">Menggambar Efek dari Perkalian matriks</h5>
+<li><h5 class="rubric" id="menggambar-efek-dari-perkalian-matriks"><strong>Menggambar Efek dari Perkalian matriks</strong></h5>
 </li>
 </ul>
 <p>Diketahui:</p>
@@ -539,13 +542,13 @@ A\vec{z} = \begin{bmatrix}
 <p>Beberapa vektor seperti <span class="math notranslate nohighlight">\((\vec{x}\)</span> dan <span class="math notranslate nohighlight">\(\vec{y})\)</span> setelah dikalikan dengan matriks, hasilnya adalah vektor nol sementara vektor lain tetepa berada pada garis tertentu.</p>
 <hr class="docutils" />
 <ul>
-<li><h5 class="rubric" id="transformasi-terhadap-bidang-kartesius">Transformasi terhadap bidang kartesius</h5>
+<li><h5 class="rubric" id="transformasi-terhadap-bidang-kartesius"><strong>Transformasi terhadap bidang kartesius</strong></h5>
 </li>
 </ul>
 <p>Pada bagian ini memeperkenalkan transisi dan menggambarkan vektor satu per satu ke menggambarkan bagaimana seluruh bidang katresius <span class="math notranslate nohighlight">\((\mathbb{R}^2)\)</span>berubah oleh matriks.</p>
 <hr class="docutils" />
 <ul>
-<li><h5 class="rubric" id="visualisasi-transformasi-matriks-menggunnakan-vektor">Visualisasi Transformasi Matriks Menggunnakan vektor</h5>
+<li><h5 class="rubric" id="visualisasi-transformasi-matriks-menggunnakan-vektor"><strong>Visualisasi Transformasi Matriks Menggunnakan vektor</strong></h5>
 </li>
 </ul>
 <p>efek transformasi terhadap seluruh bidang Kartesius dengan melihat bagaimana <strong>persegi satuan (unit square)</strong> berubah.
@@ -627,7 +630,7 @@ A = \begin{bmatrix}
 <img alt="Cuplikan layar 2025-04-13 200922" src="https://hackmd.io/_uploads/rJGzYNYR1x.png" />
 menggambarkan bahwa garis-garis lurus pada persegi satuan tetap lurus setelah transformasi oleh matriks, meskipun bentuknya berubah.</p>
 <ul>
-<li><h5 class="rubric" id="transformasi-matriks-terhadap-sebuah-wilayah">Transformasi Matriks terhadap sebuah wilayah</h5>
+<li><h5 class="rubric" id="transformasi-matriks-terhadap-sebuah-wilayah"><strong>Transformasi Matriks terhadap sebuah wilayah</strong></h5>
 </li>
 </ul>
 <p>Matriks yang digunakan:</p>
@@ -660,7 +663,7 @@ a \\ c
 <p>dapat dilihat bahwa kolom pertama dan kedua dari <span class="math notranslate nohighlight">\(𝐴\)</span> menentukan ke mana titik (1,0) dan (0,1) berpindah, yang berarti kita bisa menyusun kembali matriks transformasi jika kita tahu ke mana kedua titik ini dipetakan.</p>
 <hr class="docutils" />
 <ul>
-<li><h5 class="rubric" id="macam-macam-transformasi-umum">Macam - macam Transformasi umum</h5>
+<li><h5 class="rubric" id="macam-macam-transformasi-umum"><strong>Macam - macam Transformasi umum</strong></h5>
 </li>
 </ul>
 <p>Beberapa transformasi umum dan matriksnya:</p>
@@ -685,9 +688,8 @@ $<span class="math notranslate nohighlight">\(\begin{bmatrix}1 &amp; 0 \\0 &amp;
 <hr class="docutils" />
 <section id="tugas">
 <h2>TUGAS<a class="headerlink" href="#tugas" title="Link to this heading">#</a></h2>
-</section>
 <section id="soal-1">
-<h2><strong>SOAL 1</strong><a class="headerlink" href="#soal-1" title="Link to this heading">#</a></h2>
+<h3><strong>SOAL 1</strong><a class="headerlink" href="#soal-1" title="Link to this heading">#</a></h3>
 <p>Diketahui :</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -728,7 +730,7 @@ A\vec{y} = \begin{bmatrix} 1 &amp; -1 \\ 2 &amp; 3 \end{bmatrix} \begin{bmatrix}
 </section>
 <hr class="docutils" />
 <section id="soal-2">
-<h2><strong>SOAL 2</strong><a class="headerlink" href="#soal-2" title="Link to this heading">#</a></h2>
+<h3><strong>SOAL 2</strong><a class="headerlink" href="#soal-2" title="Link to this heading">#</a></h3>
 <p>Diketahui:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -757,7 +759,7 @@ A\vec{y} = \begin{bmatrix} 2 &amp; 0 \\ -1 &amp; 3 \end{bmatrix}
 </section>
 <hr class="docutils" />
 <section id="soal-5">
-<h2><strong>SOAL 5</strong><a class="headerlink" href="#soal-5" title="Link to this heading">#</a></h2>
+<h3><strong>SOAL 5</strong><a class="headerlink" href="#soal-5" title="Link to this heading">#</a></h3>
 <p><img alt="Cuplikan layar 2025-04-11 105341" src="https://hackmd.io/_uploads/rJFPMzLRyx.png" /></p>
 <p>Dari gambar diketahui transformasi berikut:</p>
 <div class="math notranslate nohighlight">
@@ -773,7 +775,7 @@ A = \begin{bmatrix} 1 &amp; 1 \\ 2 &amp; 3 \end{bmatrix}
 </section>
 <hr class="docutils" />
 <section id="soal-6">
-<h2><strong>SOAL 6</strong><a class="headerlink" href="#soal-6" title="Link to this heading">#</a></h2>
+<h3><strong>SOAL 6</strong><a class="headerlink" href="#soal-6" title="Link to this heading">#</a></h3>
 <p><img alt="Cuplikan layar 2025-04-11 105349" src="https://hackmd.io/_uploads/SyG2VGL0ye.png" /></p>
 <p>Dari gambar diketahui transformasi berikut:</p>
 <div class="math notranslate nohighlight">
@@ -786,6 +788,7 @@ A = \begin{bmatrix} 1 &amp; 1 \\ 2 &amp; 3 \end{bmatrix}
 \[\begin{split}
 A = \begin{bmatrix} 1 &amp; -1 \\ 1 &amp; 1 \end{bmatrix}
 \end{split}\]</div>
+</section>
 </section>
 </section>
 
@@ -853,11 +856,13 @@ A = \begin{bmatrix} 1 &amp; -1 \\ 1 &amp; 1 \end{bmatrix}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas">TUGAS</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1"><strong>SOAL 1</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-2"><strong>SOAL 2</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-5"><strong>SOAL 5</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-6"><strong>SOAL 6</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas">TUGAS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1"><strong>SOAL 1</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-2"><strong>SOAL 2</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-5"><strong>SOAL 5</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-6"><strong>SOAL 6</strong></a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
