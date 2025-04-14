@@ -1,0 +1,915 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>**RINGKASAN DAN TUGAS (Transformasi Matriks) ** &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'RINGKASAN MATERI UTS';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="markdown-notebooks.html" />
+    <link rel="prev" title="Matriks Invers" href="notebooks2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/hani.jpg" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/hani.jpg" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to Komputasi Aljabar Linier
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Sistem Persamaan Linier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks2.html"><strong>Matriks Invers</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">**RINGKASAN DAN TUGAS (Transformasi Matriks) **</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FRINGKASAN MATERI UTS.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/RINGKASAN MATERI UTS.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>**RINGKASAN DAN TUGAS (Transformasi Matriks) **</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas">TUGAS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1"><strong>SOAL 1</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-2"><strong>SOAL 2</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-5"><strong>SOAL 5</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-6"><strong>SOAL 6</strong></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="ringkasan-dan-tugas-transformasi-matriks">
+<h1>**RINGKASAN DAN TUGAS (Transformasi Matriks) **<a class="headerlink" href="#ringkasan-dan-tugas-transformasi-matriks" title="Link to this heading">#</a></h1>
+<ul>
+<li><h5 class="rubric" id="transformasi-matriks">Transformasi Matriks</h5>
+</li>
+</ul>
+<p>Transformasi Matriks yaitu bagaimana matriks dapat digunakan untuk mengubah satu vektor menjadi vektor lainnya.
+Dengan menggunakan matriks <span class="math notranslate nohighlight">\(A\)</span> berukuran <span class="math notranslate nohighlight">\(m\)</span> X <span class="math notranslate nohighlight">\(n\)</span> bisa digunakan untuk mendefinisikan sebuah fungsi <span class="math notranslate nohighlight">\(T\)</span> yang mengambil vektor kolom <span class="math notranslate nohighlight">\(\vec{x}\)</span> adalah vektor kolom berukuran <span class="math notranslate nohighlight">\(n \times 1\)</span> dan menghasilkan vektor kolom <span class="math notranslate nohighlight">\(\vec{y}\)</span> berukuran <span class="math notranslate nohighlight">\(m \times 1\)</span> melalui persamaan:
+$<span class="math notranslate nohighlight">\(
+\vec{y} = T(\vec{x}) = A\vec{x}
+\)</span>$</p>
+<p>Fungsi ini disebut <strong>Transformasi Matriks</strong>, dan termasuk dalam kelas umum yang biasanya disebut <strong>Transformasi Linier</strong> yaitu fungsi antar vektor</p>
+<hr class="docutils" />
+<ul>
+<li><h5 class="rubric" id="perkalian-matriks-vektor">Perkalian Matriks - Vektor</h5>
+</li>
+</ul>
+<p>Agar hasil perkalian tetap berupa vektor  2D <span class="math notranslate nohighlight">\((\ \mathbb{R}^2)\)</span>, maka matriks <span class="math notranslate nohighlight">\(A\)</span> harus berukuran <span class="math notranslate nohighlight">\(2\)</span> X <span class="math notranslate nohighlight">\(2\)</span>.
+Diberikan matriks <span class="math notranslate nohighlight">\(A\)</span> dan tiga vektor <span class="math notranslate nohighlight">\(\vec{x},\ \vec{y},\ \vec{z}\)</span> hasil perkalian antara matriks dan vektor dihitung sebagai berikut:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix}
+4 &amp; 2 \\
+1 &amp; 3
+\end{bmatrix}, \quad
+\vec{x} = \begin{bmatrix}
+1 \\
+1
+\end{bmatrix}, \quad
+\vec{y} = \begin{bmatrix}
+-1 \\
+1
+\end{bmatrix}, \quad
+\vec{z} = \begin{bmatrix}
+3 \\
+-1
+\end{bmatrix}
+\end{split}\]</div>
+<p>Solusi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A\vec{x} = \begin{bmatrix}
+5 \\
+5
+\end{bmatrix}, \quad
+A\vec{y} = \begin{bmatrix}
+-3 \\
+1
+\end{bmatrix}, \quad
+A\vec{z} = \begin{bmatrix}
+-1 \\
+3
+\end{bmatrix}
+\end{split}\]</div>
+<p>Perkalian matriks mengubah panjang dan arah vektor dalam contoh di atas vektor <span class="math notranslate nohighlight">\(\vec{x}\)</span> dan <span class="math notranslate nohighlight">\(A\vec{x}\)</span> memiliki arah yang sama tapi panjangnya yang berubah. Namun, <span class="math notranslate nohighlight">\(\vec{y}\)</span> dan <span class="math notranslate nohighlight">\(\vec{z}\)</span> beruubah arah saat dikalikan dengan <span class="math notranslate nohighlight">\(A\)</span>. Hal ini menunjukkan bahwa matriks bertindak secara berbeda terhadap vektor yang berbeda.</p>
+<hr class="docutils" />
+<ul>
+<li><h5 class="rubric" id="menggabungkan-penjumlahan-dan-perkalian-matriks">Menggabungkan penjumlahan dan perkalian matriks</h5>
+</li>
+</ul>
+<p>Diketahui:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix}
+1 &amp; 1 \\
+1 &amp; 2
+\end{bmatrix}, \quad
+\vec{x} = \begin{bmatrix}
+2 \\
+1
+\end{bmatrix}, \quad
+\vec{y} = \begin{bmatrix}
+-1 \\
+1
+\end{bmatrix}
+\end{split}\]</div>
+<p>Sketsa: <span class="math notranslate nohighlight">\(\vec{x} + \vec{y}\)</span>,<span class="math notranslate nohighlight">\(A\vec{x}\)</span>,<span class="math notranslate nohighlight">\(A\vec{y}\)</span> dan <span class="math notranslate nohighlight">\(A(\vec{x}+\vec{y})\)</span></p>
+<p>langkah ini bertujuan untuk melihat bagaimana penjumlahan vektor berinteraksi dengan transformasi matriks.</p>
+<p>Dihitung:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{x} + \vec{y} = \begin{bmatrix}
+1 \\
+2
+\end{bmatrix}, \quad
+A\vec{x} = \begin{bmatrix}
+3 \\
+4
+\end{bmatrix}, \quad
+A\vec{y} = \begin{bmatrix}
+0 \\
+1
+\end{bmatrix}, \quad
+A(\vec{x} + \vec{y}) = \begin{bmatrix}
+3 \\
+5
+\end{bmatrix}
+\end{split}\]</div>
+<p>Ini menunjukkan <strong>sifat distributif</strong> dari perkalian matriks terhadap penjumlahan vektor: $<span class="math notranslate nohighlight">\(A(\vec{x} + \vec{y}) = A\vec{x} + A\vec{y}\)</span>$</p>
+<hr class="docutils" />
+<ul>
+<li><h5 class="rubric" id="menggambar-efek-dari-perkalian-matriks">Menggambar Efek dari Perkalian matriks</h5>
+</li>
+</ul>
+<p>Diketahui:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix}
+1 &amp; 1 \\
+-1 &amp; -1
+\end{bmatrix}, \quad
+\vec{x} = \begin{bmatrix}
+1 \\
+1
+\end{bmatrix}, \quad
+\vec{y} = \begin{bmatrix}
+-1 \\
+1
+\end{bmatrix}, \quad
+\vec{z} = \begin{bmatrix}
+4 \\
+4
+\end{bmatrix}
+\end{split}\]</div>
+<p>Solusi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A\vec{x} = \begin{bmatrix}
+0 \\
+0
+\end{bmatrix} \quad 
+A\vec{y} = \begin{bmatrix}
+-2 \\
+-2
+\end{bmatrix} \quad
+and \quad
+A\vec{z} = \begin{bmatrix}
+3 \\
+3\end{bmatrix}
+\end{split}\]</div>
+<p>Beberapa vektor seperti <span class="math notranslate nohighlight">\((\vec{x}\)</span> dan <span class="math notranslate nohighlight">\(\vec{y})\)</span> setelah dikalikan dengan matriks, hasilnya adalah vektor nol sementara vektor lain tetepa berada pada garis tertentu.</p>
+<hr class="docutils" />
+<ul>
+<li><h5 class="rubric" id="transformasi-terhadap-bidang-kartesius">Transformasi terhadap bidang kartesius</h5>
+</li>
+</ul>
+<p>Pada bagian ini memeperkenalkan transisi dan menggambarkan vektor satu per satu ke menggambarkan bagaimana seluruh bidang katresius <span class="math notranslate nohighlight">\((\mathbb{R}^2)\)</span>berubah oleh matriks.</p>
+<hr class="docutils" />
+<ul>
+<li><h5 class="rubric" id="visualisasi-transformasi-matriks-menggunnakan-vektor">Visualisasi Transformasi Matriks Menggunnakan vektor</h5>
+</li>
+</ul>
+<p>efek transformasi terhadap seluruh bidang Kartesius dengan melihat bagaimana <strong>persegi satuan (unit square)</strong> berubah.
+Misalkan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix}
+1 &amp; 4 \\
+2 &amp; 3
+\end{bmatrix}
+\end{split}\]</div>
+<p>Titik - titik sudut dari persegi satuan berada di:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+0 \\
+0
+\end{bmatrix}, \quad
+\begin{bmatrix}
+1 \\
+0
+\end{bmatrix}, \quad
+\begin{bmatrix}
+1 \\
+1
+\end{bmatrix}, \quad
+\begin{bmatrix}
+0 \\
+1
+\end{bmatrix}
+\end{split}\]</div>
+<p>Setelah dikalikan deng <span class="math notranslate nohighlight">\(A\)</span>, titik - titik tersebut menjadi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+0 \\
+0
+\end{bmatrix}, \quad
+\begin{bmatrix}
+1 \\
+2
+\end{bmatrix}, \quad
+\begin{bmatrix}
+5 \\
+5
+\end{bmatrix}, \quad
+\begin{bmatrix}
+4 \\
+3
+\end{bmatrix}
+\end{split}\]</div>
+<p>Adapun tips cepat untuk menggunakan matriks kolom:
+Buat matriks <span class="math notranslate nohighlight">\(B\)</span> yang kolom - kolomnya adalah titik - titik susdut:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B = \begin{bmatrix}
+0 &amp; 1 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 1
+\end{bmatrix}
+\end{split}\]</div>
+<p>Dikalikan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+AB = \begin{bmatrix}
+0 &amp; 2 &amp; 6 &amp; 4 \\
+0 &amp; 1 &amp; 4 &amp; 3
+\end{bmatrix}
+\end{split}\]</div>
+<p>Proses ini cepat jika harus dilakukan transformasi pada banyak titik sekaligus</p>
+<p>Perubahan bentuk dari persegi satuan setelah dikalikan dengan matriks:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix}
+1 &amp; 4 \\
+2 &amp; 3
+\end{bmatrix}
+\end{split}\]</div>
+<p>Menghasilkan persegi berubah menjadi jajargenjang. Selain merenggang, bentuknya juga tampak terbalik, seolah titik - titik segitiga dan persegi saling bertukar tempat.
+<img alt="Cuplikan layar 2025-04-13 200922" src="https://hackmd.io/_uploads/rJGzYNYR1x.png" />
+menggambarkan bahwa garis-garis lurus pada persegi satuan tetap lurus setelah transformasi oleh matriks, meskipun bentuknya berubah.</p>
+<ul>
+<li><h5 class="rubric" id="transformasi-matriks-terhadap-sebuah-wilayah">Transformasi Matriks terhadap sebuah wilayah</h5>
+</li>
+</ul>
+<p>Matriks yang digunakan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix}
+0 &amp; -1 \\
+1 &amp; 0
+\end{bmatrix}
+\end{split}\]</div>
+<p>Matriks ini merupakan rotasi 90 derajat berlawanan arah jarum jam terhadap titik asal (0,0) dalam bidang kartesius.
+Contoh diberikan dengan menggunakan matriks:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix}
+a &amp; b \\
+c &amp; d
+\end{bmatrix}
+\end{split}\]</div>
+<p>hasil perkalian:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A\vec{e_1} = \begin{bmatrix}
+a \\ c
+\end{bmatrix} \quad
+A\vec{e_2} = \begin{bmatrix}
+a \\ c
+\end{bmatrix}
+\end{split}\]</div>
+<p>dapat dilihat bahwa kolom pertama dan kedua dari <span class="math notranslate nohighlight">\(𝐴\)</span> menentukan ke mana titik (1,0) dan (0,1) berpindah, yang berarti kita bisa menyusun kembali matriks transformasi jika kita tahu ke mana kedua titik ini dipetakan.</p>
+<hr class="docutils" />
+<ul>
+<li><h5 class="rubric" id="macam-macam-transformasi-umum">Macam - macam Transformasi umum</h5>
+</li>
+</ul>
+<p>Beberapa transformasi umum dan matriksnya:</p>
+<ul class="simple">
+<li><p>Vertical Stretch:
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}1 &amp; 0 \\0 &amp; k\end{bmatrix}\)</span>$</p></li>
+<li><p>Horizontal Shear:
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}1 &amp; k \\0 &amp; 1\end{bmatrix}\)</span>$</p></li>
+<li><p>Vertical Shear:
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}1 &amp; 0 \\k &amp; 1\end{bmatrix}\)</span>$</p></li>
+<li><p>Horizontal Reflection (sumbu <span class="math notranslate nohighlight">\(y\)</span>):
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}-1 &amp; 0 \\0 &amp; 1\end{bmatrix}\)</span>$</p></li>
+<li><p>Vertical Reflection (sumbu <span class="math notranslate nohighlight">\(x\)</span>):
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}1 &amp; 0 \\0 &amp; -1\end{bmatrix}\)</span>$</p></li>
+<li><p>Refleksi Diagonal (<span class="math notranslate nohighlight">\(y = x\)</span>):
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}0 &amp; 1 \\1 &amp; 0\end{bmatrix}\)</span>$</p></li>
+<li><p>Rotasi sebesar sudut <span class="math notranslate nohighlight">\(\theta\)</span>:
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}\cos \theta &amp; -\sin \theta \\\sin \theta &amp; \cos \theta\end{bmatrix}\)</span>$</p></li>
+<li><p>Proyeksi ke sumbu <span class="math notranslate nohighlight">\(x\)</span>:
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}1 &amp; 0 \\0 &amp; 0\end{bmatrix}\)</span>$</p></li>
+</ul>
+<hr class="docutils" />
+<section id="tugas">
+<h2>TUGAS<a class="headerlink" href="#tugas" title="Link to this heading">#</a></h2>
+</section>
+<section id="soal-1">
+<h2><strong>SOAL 1</strong><a class="headerlink" href="#soal-1" title="Link to this heading">#</a></h2>
+<p>Diketahui :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix} 1 &amp; -1 \\ 2 &amp; 3 \end{bmatrix}, \quad 
+\vec{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad 
+\vec{y} = \begin{bmatrix} -1 \\ 2 \end{bmatrix}
+\end{split}\]</div>
+<p>Penyelesaian:</p>
+<p><strong>Hitung <span class="math notranslate nohighlight">\(A\vec{x}\)</span></strong></p>
+<p>Misalkan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix} 1 &amp; -1 \\ 2 &amp; 3 \end{bmatrix}, \quad \vec{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<p>Perkalian matriks:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A\vec{x} = \begin{bmatrix} 1 &amp; -1 \\ 2 &amp; 3 \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+= \begin{bmatrix} 1 \times 1 + (-1) \times 1 \\ 2 \times 1 + 3 \times 1 \end{bmatrix}
+= \begin{bmatrix} 1 - 1 \\ 2 + 3 \end{bmatrix}
+= \begin{bmatrix} 0 \\ 5 \end{bmatrix}
+\end{split}\]</div>
+<p>Penyelesaian:</p>
+<p><strong>Hitung <span class="math notranslate nohighlight">\(A\vec{y}\)</span></strong></p>
+<p>Misalkan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix} 1 &amp; -1 \\ 2 &amp; 3 \end{bmatrix}, \quad \vec{y} = \begin{bmatrix} -1 \\ 2 \end{bmatrix}
+\end{split}\]</div>
+<p>Perkalian matriks:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A\vec{y} = \begin{bmatrix} 1 &amp; -1 \\ 2 &amp; 3 \end{bmatrix} \begin{bmatrix} -1 \\ 2 \end{bmatrix}
+= \begin{bmatrix} 1 \times (-1) + (-1) \times 2 \\ 2 \times (-1) + 3 \times 2 \end{bmatrix}
+= \begin{bmatrix} -1 - 2 \\ -2 + 6 \end{bmatrix}
+= \begin{bmatrix} -3 \\ 4 \end{bmatrix}
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="soal-2">
+<h2><strong>SOAL 2</strong><a class="headerlink" href="#soal-2" title="Link to this heading">#</a></h2>
+<p>Diketahui:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix} 2 &amp; -1 \\ 0 &amp; 3 \end{bmatrix}, \quad
+\vec{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad
+\vec{y} = \begin{bmatrix} -1 \\ 2 \end{bmatrix}
+\end{split}\]</div>
+<p>Perkalian matriks:</p>
+<p><strong>Hitung <span class="math notranslate nohighlight">\(A\vec{x}\)</span></strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A\vec{x} = \begin{bmatrix} 2 &amp; 0 \\ -1 &amp; 3 \end{bmatrix}
+\begin{bmatrix} 1 \\ 1 \end{bmatrix}
+= \begin{bmatrix} 2 \cdot 1 + 0 \cdot 1 \\ -1 \cdot 1 + 3 \cdot 1 \end{bmatrix}
+= \begin{bmatrix} 2 \\ 2 \end{bmatrix}
+\end{split}\]</div>
+<p>Perkalian matriks:</p>
+<p><strong>Hitung <span class="math notranslate nohighlight">\(A\vec{y}\)</span></strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A\vec{y} = \begin{bmatrix} 2 &amp; 0 \\ -1 &amp; 3 \end{bmatrix}
+\begin{bmatrix} -1 \\ 2 \end{bmatrix}
+= \begin{bmatrix} 2 \cdot (-1) + 0 \cdot 2 \\ -1 \cdot (-1) + 3 \cdot 2 \end{bmatrix}
+= \begin{bmatrix} -2 \\ 7 \end{bmatrix}
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="soal-5">
+<h2><strong>SOAL 5</strong><a class="headerlink" href="#soal-5" title="Link to this heading">#</a></h2>
+<p><img alt="Cuplikan layar 2025-04-11 105341" src="https://hackmd.io/_uploads/rJFPMzLRyx.png" /></p>
+<p>Dari gambar diketahui transformasi berikut:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \rightarrow \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad
+\vec{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix} \rightarrow \begin{bmatrix} 1 \\ 3 \end{bmatrix}
+\end{split}\]</div>
+<p>Maka matriks transformasinya adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix} 1 &amp; 1 \\ 2 &amp; 3 \end{bmatrix}
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="soal-6">
+<h2><strong>SOAL 6</strong><a class="headerlink" href="#soal-6" title="Link to this heading">#</a></h2>
+<p><img alt="Cuplikan layar 2025-04-11 105349" src="https://hackmd.io/_uploads/SyG2VGL0ye.png" /></p>
+<p>Dari gambar diketahui transformasi berikut:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \rightarrow \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad
+\vec{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix} \rightarrow \begin{bmatrix} -1 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<p>Maka matriks transformasinya adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix} 1 &amp; -1 \\ 1 &amp; 1 \end{bmatrix}
+\end{split}\]</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="notebooks2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Matriks Invers</strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="markdown-notebooks.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas">TUGAS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1"><strong>SOAL 1</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-2"><strong>SOAL 2</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-5"><strong>SOAL 5</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-6"><strong>SOAL 6</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rifda Nahariyah Ramadhani
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
