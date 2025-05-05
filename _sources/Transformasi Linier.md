@@ -168,10 +168,9 @@ $$
 $$
 
 * A(4, 5) → **A′(4, -5)**
-* B(-6, 2) → **B′(-6, -2)**
 
-<iframe scr="https://www.geogebra.org/classic/kqprkhqv" width="800" height="600" style="border:0;"></iframe>
-
+<iframe src="https://www.geogebra.org/classic/tkerxa7p"
+width="800" height="600" style="border:0;"></iframe>
 
 
 ### 2. Refleksi terhadap sumbu-y
@@ -183,9 +182,10 @@ $$
 \end{bmatrix}
 $$
 
-* C(7, -3) → **C′(-7, -3)**
-* D(2, 6) → **D′(-2, 6)**
+* B(2, 6) → **B′(-2, 6)**
 
+<iframe src="https://www.geogebra.org/classic/hffaydct"
+width="800" height="600" style="border:0;"></iframe>
 
 
 ### 3. Refleksi terhadap garis y = x
@@ -197,8 +197,10 @@ $$
 \end{bmatrix}
 $$
 
-* E(8, 1) → **E′(1, 8)**
-* F(-4, 9) → **F′(9, -4)**
+* C(8, 1) → **C′(1, 8)**
+
+<iframe src="https://www.geogebra.org/classic/nsnyhzhc"
+width="800" height="600" style="border:0;"></iframe>
 
 
 
@@ -211,8 +213,10 @@ $$
 \end{bmatrix}
 $$
 
-* G(5, -2) → **G′(2, -5)**
-* H(-3, -7) → **H′(7, 3)**
+* D(5, -2) → **D′(2, -5)**
+
+<iframe src="https://www.geogebra.org/classic/p4akjnch"
+width="800" height="600" style="border:0;"></iframe>
 
 
 ### 5. Refleksi terhadap titik asal
@@ -224,8 +228,11 @@ $$
 \end{bmatrix}
 $$
 
-* I(6, -8) → **I′(-6, 8)**
-* J(-9, 3) → **J′(9, -3)**
+* E(6, 8) → **E′(6,-8)**
+
+<iframe src="https://www.geogebra.org/classic/zujaa6rm"
+width="800" height="600" style="border:0;"></iframe>
+
 
 
 
