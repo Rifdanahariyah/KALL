@@ -1,9 +1,9 @@
-## Transformasi linier dan Refleksi
+## **Transformasi linier dan Refleksi**
 
-## **Transformasi Linier**
+### **Transformasi Linier**
 Transformasi linier adalah suatu fungsi atau pemetaan dari ruang vektor ke ruang vektor lain (atau ke dirinya sendiri), yang memenuhi dua sifat utama, yaitu:
 
-## **Sifat Additivitas (Penjumlahan Vektor)**
+#### **Sifat Additivitas (Penjumlahan Vektor)**
 Pembuktian bahwa transformasi
 
 $$
@@ -18,20 +18,20 @@ $$
 <br>
 
 
-### Langkah 1: Misalkan dua vektor di $\mathbb{R}^2$
+##### Langkah 1: Misalkan dua vektor di $\mathbb{R}^2$
 
 * $\mathbf{u} = (u_1, u_2)$
 * $\mathbf{v} = (v_1, v_2)$
 <br>
 
-### Langkah 2: Hitung $\mathbf{u} + \mathbf{v}$
+##### Langkah 2: Hitung $\mathbf{u} + \mathbf{v}$
 
 $$
 \mathbf{u} + \mathbf{v} = (u_1 + v_1, u_2 + v_2)
 $$
 <br>
 
-### Langkah 3: Hitung $T(\mathbf{u} + \mathbf{v})$
+##### Langkah 3: Hitung $T(\mathbf{u} + \mathbf{v})$
 
 Karena $T(x, y) = (x - y, x + 2y)$, maka:
 
@@ -49,7 +49,7 @@ $$
 <br>
 
 
-### Langkah 4: Hitung $T(\mathbf{u}) + T(\mathbf{v})$
+##### Langkah 4: Hitung $T(\mathbf{u}) + T(\mathbf{v})$
 
 $$
 T(\mathbf{u}) = (u_1 - u_2,\ u_1 + 2u_2)
@@ -65,7 +65,7 @@ $$
 <br>
 
 
-### Langkah 5: Bandingkan hasilnya
+##### Langkah 5: Bandingkan hasilnya
 
 Kita dapat melihat bahwa:
 
@@ -77,7 +77,7 @@ Jadi **sifat additivitas (penjumlahan vektor)** terbukti berlaku sebagai Trasfor
 
 <br> 
 
-## **Sifat Homogenitas (Perkalian Skalar)**
+#### **Sifat Homogenitas (Perkalian Skalar)**
 
 Mari kita bahas secara **jelas dan lengkap** tentang **sifat homogenitas (perkalian skalar)** untuk membuktikan bahwa suatu fungsi $T: \mathbb{R}^2 \rightarrow \mathbb{R}^2$ adalah **transformasi linier**.
 
@@ -89,7 +89,7 @@ T(c\mathbf{v}) = c \cdot T(\mathbf{v})
 $$
 
 
-### **Contoh Uji Homogenitas pada Transformasi**
+##### **Contoh Uji Homogenitas pada Transformasi**
 
 Misalkan transformasi:
 
@@ -101,13 +101,13 @@ Uji apakah fungsi ini memenuhi sifat homogenitas.
 
 
 
-### 1. **Misalkan sebuah vektor**
+##### 1. **Misalkan sebuah vektor**
 
 $$
 \mathbf{v} = (v_1, v_2)
 $$
 
-### 2. **Kalikan vektor dengan skalar $c$**
+##### 2. **Kalikan vektor dengan skalar $c$**
 
 $$
 c \cdot \mathbf{v} = (cv_1, cv_2)
@@ -115,7 +115,7 @@ $$
 
 
 
-### 3. **Hitung $T(c \cdot \mathbf{v})$**
+##### 3. **Hitung $T(c \cdot \mathbf{v})$**
 
 $$
 T(cv_1, cv_2) = (cv_1 - cv_2,\ cv_1 + 2cv_2)
@@ -123,7 +123,7 @@ T(cv_1, cv_2) = (cv_1 - cv_2,\ cv_1 + 2cv_2)
 $$
 
 
-### 4. **Hitung $c \cdot T(\mathbf{v})$**
+##### 4. **Hitung $c \cdot T(\mathbf{v})$**
 
 $$
 T(v_1, v_2) = (v_1 - v_2,\ v_1 + 2v_2)
@@ -131,7 +131,7 @@ T(v_1, v_2) = (v_1 - v_2,\ v_1 + 2v_2)
 $$
 
 
-### Bandingkan hasilnya:
+##### Bandingkan hasilnya:
 
 $$
 T(c\mathbf{v}) = c \cdot T(\mathbf{v})
@@ -141,7 +141,7 @@ Jadi, **sifat homogenitas terpenuhi.**
 
 
 
-###  **Kesimpulan:**
+#####  **Kesimpulan:**
 
 Jika kita sudah menunjukkan bahwa:
 
@@ -158,7 +158,7 @@ Berikut **2 contoh titik berbeda** untuk masing-masing jenis refleksi **beserta 
 
 
 
-### 1. Refleksi terhadap sumbu-x
+#### 1. Refleksi terhadap sumbu-x
 
 $$
 \begin{bmatrix}
@@ -173,7 +173,7 @@ $$
 width="800" height="600" style="border:0;"></iframe>
 
 
-### 2. Refleksi terhadap sumbu-y
+#### 2. Refleksi terhadap sumbu-y
 
 $$
 \begin{bmatrix}
@@ -188,7 +188,7 @@ $$
 width="800" height="600" style="border:0;"></iframe>
 
 
-### 3. Refleksi terhadap garis y = x
+#### 3. Refleksi terhadap garis y = x
 
 $$
 \begin{bmatrix}
@@ -204,7 +204,7 @@ width="800" height="600" style="border:0;"></iframe>
 
 
 
-### 4. Refleksi terhadap garis y = -x
+#### 4. Refleksi terhadap garis y = -x
 
 $$
 \begin{bmatrix}
@@ -219,7 +219,7 @@ $$
 width="800" height="600" style="border:0;"></iframe>
 
 
-### 5. Refleksi terhadap titik asal
+#### 5. Refleksi terhadap titik asal
 
 $$
 \begin{bmatrix}
