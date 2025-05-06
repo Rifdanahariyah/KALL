@@ -508,6 +508,7 @@ ax.legend()
 # Tampilkan grafik
 plt.show()
 ```
+![image](https://hackmd.io/_uploads/BJK7AZvele.png)
 
 ### **Refleksi Y = 2**
 
@@ -549,6 +550,7 @@ ax.legend()
 # Tampilkan
 plt.show()
 ```
+![image](https://hackmd.io/_uploads/SJvyAbPxge.png)
 
 ### **Refleksi terhadap garis y = x**
 
@@ -599,3 +601,4 @@ ax.legend()
 # Tampilkan
 plt.show()
 ```
+![image](https://hackmd.io/_uploads/SJPf0bPlxg.png)
