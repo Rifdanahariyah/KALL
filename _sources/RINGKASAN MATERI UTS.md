@@ -460,136 +460,142 @@ $$
 ## **TRANSFORMASI LINIER**
 ### **Refleksi X = 2**
 
+```python
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
-##### Titik-titik objek asli (misalnya, segitiga 3D)
-points = np.array([
-    [1, 2, 5],
-    [2, 3, 1],
-    [1, 2, 1]
-]).T  # bentuknya 3xN
+# Titik-titik asal (koordinat domain)
+x = np.array([-1, 0, 1])
+y = np.array([1, 0, -1])
 
-##### Lakukan refleksi terhadap bidang x = 2 (transformasi x' = 4 - x)
-reflected_points = points.copy()
-reflected_points[0] = 4 - reflected_points[0]  # refleksi terhadap x = 2
+# Membuat matriks koordinat dalam bentuk 2xN
+koordinats = np.vstack((x, y))
 
-##### Buat plot
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
+# Matriks transformasi refleksi terhadap sumbu Y
+B = np.array([[-1, 0],
+              [ 0, 1]])
 
-##### Gambar objek asli (biru)
-ax.plot(points[0], points[1], points[2], 'bo-', label='Asli')
+# Transformasi bayangan (codomain)
+B_trans = B @ koordinats
+x_LT2 = B_trans[0, :]
+y_LT2 = B_trans[1, :]
 
-##### Gambar objek setelah refleksi (merah)
-ax.plot(reflected_points[0], reflected_points[1], reflected_points[2], 'ro-', label='Refleksi')
+# Membuat gambar dan sumbu
+fig, ax = plt.subplots()
 
-##### Tambahkan garis bantu bidang x = 2
-y_plane, z_plane = np.meshgrid(np.linspace(0, 3, 2), np.linspace(0, 3, 2))
-x_plane = np.full((2, 2), 2)  # bidang x = 2
-ax.plot_surface(x_plane, y_plane, z_plane, alpha=0.2, color='gray')
+# Plot titik asal (merah) dan bayangan (biru)
+ax.plot(x, y, 'ro', label='Asal (Domain)')
+ax.plot(x_LT2, y_LT2, 'bo', label='Bayangan (Codomain)')
 
-##### Set aspek dan label
-ax.set_xlabel('X')
-ax.set_ylabel('Y')
-ax.set_zlabel('Z')
-ax.set_title('Refleksi terhadap bidang x = 2')
+# Garis penghubung titik
+ax.plot(x, y, 'r--')
+ax.plot(x_LT2, y_LT2, 'b-')
+
+# Gambar sumbu X dan Y
+ax.axvline(x=0, color='k', linestyle=':')
+ax.axhline(y=0, color='k', linestyle=':')
+
+# Tambahkan garis vertikal di x = 2
+ax.axvline(x=2, color='g', linestyle='--', label='x = 2')
+
+# Set pengaturan sumbu
+ax.grid(True)
+ax.axis([-2, 2.5, -1.5, 2])
+ax.set_aspect('equal')
+ax.set_title("Refleksi terhadap Sumbu X=2")
 ax.legend()
-ax.set_box_aspect([1,1,1])  # aspek rasio 1:1:1
 
+# Tampilkan grafik
 plt.show()
+```
 
 ### **Refleksi Y = 2**
 
+```python
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
-##### Titik-titik objek asli (misalnya, segitiga 3D)
-points = np.array([
-    [1, 4, 2],
-    [1, 3, 1],
-    [5, 2, 3]
-]).T  # bentuknya 3xN
+# Titik-titik asal (domain)
+x = np.array([-1, 0, 1])
+y = np.array([1, 0, -1])
 
-##### Matriks refleksi terhadap garis y = 2
-##### Untuk refleksi terhadap y = 2, kita gunakan transformasi y' = 4 - y
-reflection_matrix = np.array([
-    [1, 0, 0],
-    [0, -1, 0],
-    [0, 0, 1]
-])
+# Refleksi terhadap garis y = 2
+y_LT2 = 4 - y  # karena 2*2 - y
+x_LT2 = x      # x tidak berubah
 
-##### Lakukan translasi dan refleksi terhadap garis y = 2
-reflected_points = points.copy()
-reflected_points[1] = 4 - reflected_points[1]  # refleksi terhadap y = 2
+# Membuat gambar dan sumbu
+fig, ax = plt.subplots()
 
-##### Buat plot
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
+# Plot titik asal dan bayangan
+ax.plot(x, y, 'ro', label='Asal (Domain)')
+ax.plot(x_LT2, y_LT2, 'bo', label='Bayangan (Codomain)')
 
-#### Gambar objek asli (biru)
-ax.plot(points[0], points[1], points[2], 'bo-', label='Asli')
+# Garis penghubung
+ax.plot(x, y, 'r--')
+ax.plot(x_LT2, y_LT2, 'b-')
 
-##### Gambar objek setelah refleksi (merah)
-ax.plot(reflected_points[0], reflected_points[1], reflected_points[2], 'ro-', label='Refleksi')
+# Gambar sumbu dan garis y = 2
+ax.axvline(x=0, color='k', linestyle=':')
+ax.axhline(y=0, color='k', linestyle=':')
+ax.axhline(y=2, color='g', linestyle='--', label='y = 2')
 
-##### Tambahkan garis bantu y = 2
-x_plane = np.zeros((2, 2))
-y_plane = np.full((2, 2), 2)
-z_plane = np.meshgrid(np.linspace(0, 3, 2), np.linspace(0, 3, 2))[0]
-ax.plot_surface(x_plane, y_plane, z_plane, alpha=0.2, color='gray')
-
-##### Set aspek dan label
-ax.set_xlabel('X')
-ax.set_ylabel('Y')
-ax.set_zlabel('Z')
-ax.set_title('Refleksi terhadap garis y = 2')
+# Atur tampilan
+ax.grid(True)
+ax.axis([-2, 2.5, -2, 5])
+ax.set_aspect('equal')
+ax.set_title("Refleksi terhadap Garis y = 2")
 ax.legend()
-ax.set_box_aspect([1, 1, 1])  # aspek rasio 1:1:1
 
+# Tampilkan
 plt.show()
+```
 
-### **Refleksi Y = X**
+### **Refleksi terhadap garis y = x**
 
+```python
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
-##### Titik-titik objek asli (misalnya, segitiga 3D)
-points = np.array([
-    [1, 5, 1],
-    [2, 2, 1],
-    [3, 2, 1]
-]).T  # bentuknya 3xN
+# Titik-titik asal (domain)
+x = np.array([-1, 0, 1])
+y = np.array([1, 0, -1])
 
-##### Matriks refleksi terhadap garis y = x (dalam ruang 3D)
-reflection_matrix = np.array([
-    [0, 1, 0],
-    [1, 0, 0],
-    [0, 0, 1]
-])
+# Membuat vektor koordinat 2xN
+koordinats = np.vstack((x, y))
 
-##### Lakukan refleksi
-reflected_points = reflection_matrix @ points
+# Matriks refleksi terhadap garis y = x
+B = np.array([[0, 1],
+              [1, 0]])
 
-##### Buat plot
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
+# Transformasi bayangan (codomain)
+B_trans = B @ koordinats
+x_LT2 = B_trans[0, :]
+y_LT2 = B_trans[1, :]
 
-##### Gambar objek asli (biru)
-ax.plot(points[0], points[1], points[2], 'bo-', label='Asli')
+# Membuat gambar dan sumbu
+fig, ax = plt.subplots()
 
-##### Gambar objek setelah refleksi (merah)
-ax.plot(reflected_points[0], reflected_points[1], reflected_points[2], 'ro-', label='Refleksi')
+# Plot titik asal dan bayangan
+ax.plot(x, y, 'ro', label='Asal (Domain)')
+ax.plot(x_LT2, y_LT2, 'bo', label='Bayangan (Codomain)')
 
-##### Set aspek dan label
-ax.set_xlabel('X')
-ax.set_ylabel('Y')
-ax.set_zlabel('Z')
-ax.set_title('Refleksi terhadap garis y = x')
+# Garis penghubung
+ax.plot(x, y, 'r--')
+ax.plot(x_LT2, y_LT2, 'b-')
+
+# Gambar sumbu dan garis y = x
+ax.axvline(x=0, color='k', linestyle=':')
+ax.axhline(y=0, color='k', linestyle=':')
+x_line = np.linspace(-2, 2, 100)
+ax.plot(x_line, x_line, 'g--', label='y = x')
+
+# Atur tampilan
+ax.grid(True)
+ax.axis([-2, 2.5, -2, 2.5])
+ax.set_aspect('equal')
+ax.set_title("Refleksi terhadap Garis y = x")
 ax.legend()
-ax.set_box_aspect([1,1,1])  # aspek rasio 1:1:1
 
+# Tampilkan
 plt.show()
+```
