@@ -185,6 +185,7 @@
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Sistem Persamaan Linier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks2.html"><strong>Matriks Invers</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="RINGKASAN%20MATERI%20UTS.html">RINGKASAN DAN TUGAS (Transformasi Matriks)</a></li>
+
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Transformasi linier dan Refleksi</strong></a></li>
 </ul>
 
@@ -405,6 +406,16 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-garis-y-x">3. Refleksi terhadap garis y = x</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4. Refleksi terhadap garis y = -x</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-titik-asal">5. Refleksi terhadap titik asal</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-y-x"><strong>Refleksi Y = X</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#titik-titik-objek-asli-misalnya-segitiga-3d">Titik-titik objek asli (misalnya, segitiga 3D)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-refleksi-terhadap-garis-y-x-dalam-ruang-3d">Matriks refleksi terhadap garis y = x (dalam ruang 3D)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lakukan-refleksi">Lakukan refleksi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#buat-plot">Buat plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gambar-objek-asli-biru">Gambar objek asli (biru)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gambar-objek-setelah-refleksi-merah">Gambar objek setelah refleksi (merah)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-aspek-dan-label">Set aspek dan label</a></li>
 </ul>
 </li>
 </ul>
@@ -639,6 +650,56 @@ width="800" height="600" style="border:0;"></iframe>
 width="800" height="600" style="border:0;"></iframe>
 </section>
 </section>
+<hr class="docutils" />
+<section id="refleksi-y-x">
+<h2><strong>Refleksi Y = X</strong><a class="headerlink" href="#refleksi-y-x" title="Link to this heading">#</a></h2>
+<p>import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D</p>
+<section id="titik-titik-objek-asli-misalnya-segitiga-3d">
+<h3>Titik-titik objek asli (misalnya, segitiga 3D)<a class="headerlink" href="#titik-titik-objek-asli-misalnya-segitiga-3d" title="Link to this heading">#</a></h3>
+<p>points = np.array([
+[1, 5, 1],
+[2, 2, 1],
+[3, 2, 1]
+]).T  # bentuknya 3xN</p>
+</section>
+<section id="matriks-refleksi-terhadap-garis-y-x-dalam-ruang-3d">
+<h3>Matriks refleksi terhadap garis y = x (dalam ruang 3D)<a class="headerlink" href="#matriks-refleksi-terhadap-garis-y-x-dalam-ruang-3d" title="Link to this heading">#</a></h3>
+<p>reflection_matrix = np.array([
+[0, 1, 0],
+[1, 0, 0],
+[0, 0, 1]
+])</p>
+</section>
+<section id="lakukan-refleksi">
+<h3>Lakukan refleksi<a class="headerlink" href="#lakukan-refleksi" title="Link to this heading">#</a></h3>
+<p>reflected_points = reflection_matrix &#64; points</p>
+</section>
+<section id="buat-plot">
+<h3>Buat plot<a class="headerlink" href="#buat-plot" title="Link to this heading">#</a></h3>
+<p>fig = plt.figure()
+ax = fig.add_subplot(111, projection=’3d’)</p>
+</section>
+<section id="gambar-objek-asli-biru">
+<h3>Gambar objek asli (biru)<a class="headerlink" href="#gambar-objek-asli-biru" title="Link to this heading">#</a></h3>
+<p>ax.plot(points[0], points[1], points[2], ‘bo-’, label=’Asli’)</p>
+</section>
+<section id="gambar-objek-setelah-refleksi-merah">
+<h3>Gambar objek setelah refleksi (merah)<a class="headerlink" href="#gambar-objek-setelah-refleksi-merah" title="Link to this heading">#</a></h3>
+<p>ax.plot(reflected_points[0], reflected_points[1], reflected_points[2], ‘ro-’, label=’Refleksi’)</p>
+</section>
+<section id="set-aspek-dan-label">
+<h3>Set aspek dan label<a class="headerlink" href="#set-aspek-dan-label" title="Link to this heading">#</a></h3>
+<p>ax.set_xlabel(‘X’)
+ax.set_ylabel(‘Y’)
+ax.set_zlabel(‘Z’)
+ax.set_title(‘Refleksi terhadap garis y = x’)
+ax.legend()
+ax.set_box_aspect([1,1,1])  # aspek rasio 1:1:1</p>
+<p>plt.show()</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -729,6 +790,16 @@ width="800" height="600" style="border:0;"></iframe>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-garis-y-x">3. Refleksi terhadap garis y = x</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4. Refleksi terhadap garis y = -x</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-titik-asal">5. Refleksi terhadap titik asal</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-y-x"><strong>Refleksi Y = X</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#titik-titik-objek-asli-misalnya-segitiga-3d">Titik-titik objek asli (misalnya, segitiga 3D)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-refleksi-terhadap-garis-y-x-dalam-ruang-3d">Matriks refleksi terhadap garis y = x (dalam ruang 3D)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lakukan-refleksi">Lakukan refleksi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#buat-plot">Buat plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gambar-objek-asli-biru">Gambar objek asli (biru)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gambar-objek-setelah-refleksi-merah">Gambar objek setelah refleksi (merah)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-aspek-dan-label">Set aspek dan label</a></li>
 </ul>
 </li>
 </ul>

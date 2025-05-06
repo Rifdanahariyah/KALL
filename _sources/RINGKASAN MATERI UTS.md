@@ -454,3 +454,142 @@ Maka matriks transformasinya adalah:
 $$
 A = \begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}
 $$
+
+-----
+
+## **TRANSFORMASI LINIER**
+### **Refleksi X = 2**
+
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+##### Titik-titik objek asli (misalnya, segitiga 3D)
+points = np.array([
+    [1, 2, 5],
+    [2, 3, 1],
+    [1, 2, 1]
+]).T  # bentuknya 3xN
+
+##### Lakukan refleksi terhadap bidang x = 2 (transformasi x' = 4 - x)
+reflected_points = points.copy()
+reflected_points[0] = 4 - reflected_points[0]  # refleksi terhadap x = 2
+
+##### Buat plot
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+##### Gambar objek asli (biru)
+ax.plot(points[0], points[1], points[2], 'bo-', label='Asli')
+
+##### Gambar objek setelah refleksi (merah)
+ax.plot(reflected_points[0], reflected_points[1], reflected_points[2], 'ro-', label='Refleksi')
+
+##### Tambahkan garis bantu bidang x = 2
+y_plane, z_plane = np.meshgrid(np.linspace(0, 3, 2), np.linspace(0, 3, 2))
+x_plane = np.full((2, 2), 2)  # bidang x = 2
+ax.plot_surface(x_plane, y_plane, z_plane, alpha=0.2, color='gray')
+
+##### Set aspek dan label
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+ax.set_title('Refleksi terhadap bidang x = 2')
+ax.legend()
+ax.set_box_aspect([1,1,1])  # aspek rasio 1:1:1
+
+plt.show()
+
+### **Refleksi Y = 2**
+
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+##### Titik-titik objek asli (misalnya, segitiga 3D)
+points = np.array([
+    [1, 4, 2],
+    [1, 3, 1],
+    [5, 2, 3]
+]).T  # bentuknya 3xN
+
+##### Matriks refleksi terhadap garis y = 2
+##### Untuk refleksi terhadap y = 2, kita gunakan transformasi y' = 4 - y
+reflection_matrix = np.array([
+    [1, 0, 0],
+    [0, -1, 0],
+    [0, 0, 1]
+])
+
+##### Lakukan translasi dan refleksi terhadap garis y = 2
+reflected_points = points.copy()
+reflected_points[1] = 4 - reflected_points[1]  # refleksi terhadap y = 2
+
+##### Buat plot
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+#### Gambar objek asli (biru)
+ax.plot(points[0], points[1], points[2], 'bo-', label='Asli')
+
+##### Gambar objek setelah refleksi (merah)
+ax.plot(reflected_points[0], reflected_points[1], reflected_points[2], 'ro-', label='Refleksi')
+
+##### Tambahkan garis bantu y = 2
+x_plane = np.zeros((2, 2))
+y_plane = np.full((2, 2), 2)
+z_plane = np.meshgrid(np.linspace(0, 3, 2), np.linspace(0, 3, 2))[0]
+ax.plot_surface(x_plane, y_plane, z_plane, alpha=0.2, color='gray')
+
+##### Set aspek dan label
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+ax.set_title('Refleksi terhadap garis y = 2')
+ax.legend()
+ax.set_box_aspect([1, 1, 1])  # aspek rasio 1:1:1
+
+plt.show()
+
+### **Refleksi Y = X**
+
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+##### Titik-titik objek asli (misalnya, segitiga 3D)
+points = np.array([
+    [1, 5, 1],
+    [2, 2, 1],
+    [3, 2, 1]
+]).T  # bentuknya 3xN
+
+##### Matriks refleksi terhadap garis y = x (dalam ruang 3D)
+reflection_matrix = np.array([
+    [0, 1, 0],
+    [1, 0, 0],
+    [0, 0, 1]
+])
+
+##### Lakukan refleksi
+reflected_points = reflection_matrix @ points
+
+##### Buat plot
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+##### Gambar objek asli (biru)
+ax.plot(points[0], points[1], points[2], 'bo-', label='Asli')
+
+##### Gambar objek setelah refleksi (merah)
+ax.plot(reflected_points[0], reflected_points[1], reflected_points[2], 'ro-', label='Refleksi')
+
+##### Set aspek dan label
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+ax.set_title('Refleksi terhadap garis y = x')
+ax.legend()
+ax.set_box_aspect([1,1,1])  # aspek rasio 1:1:1
+
+plt.show()
