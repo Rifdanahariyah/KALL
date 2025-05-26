@@ -10,7 +10,7 @@ $$Av=λv$$
 
 * Eigenvector: vektor yang tidak nol yang ketika menerima transformasi oleh suatu matriks, arahnya tetap, hanya panjang atau skalanya yang berubah. Artinya, setelah dikalikan dengan matriks, hasilnya tetap searah dengan vektor semula.
 
-#### **Mencari Eigenvalues dan Eigenvectors**
+##### **Mencari Eigenvalues dan Eigenvectors**
 
 ```python
 import numpy as np
@@ -53,13 +53,13 @@ Vektor eigen:
  [0.4472136  0.70710678]]
 ```
 
-### **Definisi Eigenvector Ortonormal dan Ortogonal**
+#### **Definisi Eigenvector Ortonormal dan Ortogonal**
 
 * Ortonormal: setiap vektor yang memiliki panjangnya = 1 (normal = 1.
 
 * Ortogonal: terdiri dari dua vektor yang dianggap ortogonal adalaha ketika sudutnya saling tegak lurus.
 
-#### **Contoh Ortonormal dan Ortogonal**
+##### **Contoh Ortonormal dan Ortogonal**
 
 Menggunakan matriks:
 $$
