@@ -62,6 +62,7 @@ Vektor eigen:
 ##### **Contoh Ortonormal dan Ortogonal**
 
 Menggunakan matriks:
+
 $$
 A = \begin{bmatrix}
 5 & 2 \\
@@ -70,6 +71,7 @@ A = \begin{bmatrix}
 $$
 
 * Mencari Eigenvalue
+
 $$
 \det(A - \lambda I) = 0 \implies
 \det \begin{bmatrix}
@@ -85,6 +87,7 @@ $$
 $$
 
 * Diketahui Eigenvalue:
+
 $$
 \lambda_1 = 7, \quad \lambda_2 = 3
 $$
@@ -118,6 +121,7 @@ $$
 $$
 
 Ambil $x = 1$, maka:
+
 $$
 \mathbf{v}_1 = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
 $$
@@ -155,11 +159,13 @@ $$
 $$
 
 * Ortogonal
+
 $$
 \mathbf{v}_1 \cdot \mathbf{v}_2 = (1)(1) + (1)(-1) = 1 - 1 = 0
 $$
 
 * Ortonormal
+
 $$
 \|\mathbf{v}_1\| = \sqrt{1^2 + 1^2} = \sqrt{2} \implies
 \mathbf{u}_1 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 1 \end{bmatrix}

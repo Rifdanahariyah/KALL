@@ -457,23 +457,25 @@ document.write(`
 </ul>
 <section id="contoh-ortonormal-dan-ortogonal">
 <h3><strong>Contoh Ortonormal dan Ortogonal</strong><a class="headerlink" href="#contoh-ortonormal-dan-ortogonal" title="Link to this heading">#</a></h3>
-<p>Menggunakan matriks:
-$<span class="math notranslate nohighlight">\(
+<p>Menggunakan matriks:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 A = \begin{bmatrix}
 5 &amp; 2 \\
 2 &amp; 5
 \end{bmatrix}
-\)</span>$</p>
+\end{split}\]</div>
 <ul class="simple">
-<li><p>Mencari Eigenvalue
-$<span class="math notranslate nohighlight">\(
+<li><p>Mencari Eigenvalue</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \det(A - \lambda I) = 0 \implies
 \det \begin{bmatrix}
 5 - \lambda &amp; 2 \\
 2 &amp; 5 - \lambda
 \end{bmatrix} = 0
-\)</span>$</p></li>
-</ul>
+\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[
 (5 - \lambda)^2 - 4 = 0
@@ -481,10 +483,13 @@ $<span class="math notranslate nohighlight">\(
 \Rightarrow (\lambda - 7)(\lambda - 3) = 0
 \]</div>
 <ul class="simple">
-<li><p>Diketahui Eigenvalue:
-$<span class="math notranslate nohighlight">\(
+<li><p>Diketahui Eigenvalue:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
 \lambda_1 = 7, \quad \lambda_2 = 3
-\)</span>$</p></li>
+\]</div>
+<ul class="simple">
 <li><p>Mencari Eigenvector:</p></li>
 </ul>
 <p>Untuk <span class="math notranslate nohighlight">\(\lambda_1 = 7:\)</span></p>
@@ -512,10 +517,11 @@ y
 \[
 -2x + 2y = 0 \implies y = x
 \]</div>
-<p>Ambil <span class="math notranslate nohighlight">\(x = 1\)</span>, maka:
-$<span class="math notranslate nohighlight">\(
+<p>Ambil <span class="math notranslate nohighlight">\(x = 1\)</span>, maka:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \mathbf{v}_1 = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
-\)</span>$</p>
+\end{split}\]</div>
 <p>Untuk <span class="math notranslate nohighlight">\(\lambda_2 = 3:\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -547,16 +553,20 @@ y
 \mathbf{v}_2 = \begin{bmatrix} 1 \\ -1 \end{bmatrix}
 \end{split}\]</div>
 <ul class="simple">
-<li><p>Ortogonal
-$<span class="math notranslate nohighlight">\(
+<li><p>Ortogonal</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
 \mathbf{v}_1 \cdot \mathbf{v}_2 = (1)(1) + (1)(-1) = 1 - 1 = 0
-\)</span>$</p></li>
-<li><p>Ortonormal
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<ul class="simple">
+<li><p>Ortonormal</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \|\mathbf{v}_1\| = \sqrt{1^2 + 1^2} = \sqrt{2} \implies
 \mathbf{u}_1 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 1 \end{bmatrix}
-\)</span>$</p></li>
-</ul>
+\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \|\mathbf{v}_2\| = \sqrt{1^2 + (-1)^2} = \sqrt{2} \implies
