@@ -65,7 +65,7 @@ $$
 $$
 
 
-<iframe src="https://www.geogebra.org/classic/rk5nae8h" width="500" height="600" style="border:0;"></iframe>
+<iframe src="https://www.geogebra.org/classic/rk5nae8h" width="800" height="600" style="border:0;"></iframe>
 
 Karena $u \cdot a = 6 \neq 0$ maka, vektor $u$ dan $v$ **tidak ortogonal** (tidak tegak lurus), karena dot product-nya bukan nol.
 
@@ -103,7 +103,7 @@ $$
 \theta = \cos^{-1}(0) = 90^\circ
 $$
 
-<iframe src="https://www.geogebra.org/classic/te7hd5yr" width="500" height="600" style="border:0;"></iframe>
+<iframe src="https://www.geogebra.org/classic/te7hd5yr" width="800" height="600" style="border:0;"></iframe>
 
 Karena $u \cdot v$ maka, vektor $u$ dan $v$ **Ortogonal** atau saling tegak lurus.
 
@@ -140,7 +140,7 @@ $$
 \cos\theta = 0 \Rightarrow \theta = 90^\circ
 $$
 
-<iframe src="https://www.geogebra.org/classic/apqku3wz" width="500" height="600" style="border:0;"></iframe>
+<iframe src="https://www.geogebra.org/classic/apqku3wz" width="800" height="600" style="border:0;"></iframe>
 
 Karena $u \cdot v$ maka, vektor $u$ dan $v$ **Ortogonal** atau saling tegak lurus.
 
