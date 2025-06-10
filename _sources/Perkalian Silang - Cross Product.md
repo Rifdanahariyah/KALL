@@ -40,7 +40,7 @@ $$
 \vec{v} = \begin{bmatrix} 4 \\ 0 \\ -1 \end{bmatrix}
 $$
 
-  * ##### **Hitung Kali Silang** $\vec{u} \times \vec{v}$
+  * **Hitung Kali Silang** $\vec{u} \times \vec{v}$
   
 $$
 \vec{u} \times \vec{v} =
@@ -61,7 +61,7 @@ $$
 \end{bmatrix}
 $$
 
-* ##### **Identifikasi Tegak Lurus pada**  $\vec{u}$
+* **Identifikasi Tegak Lurus pada**  $\vec{u}$
 
 $$
 (\vec{u} \times \vec{v}) \cdot \vec{u} =
@@ -70,7 +70,7 @@ $$
 = (-2)(1) + (13)(2) + (-8)(3) = -2 + 26 - 24 = 0
 $$
 
-* ##### **Identifikasi Tegak Lurus pada** $\vec{v}$
+* **Identifikasi Tegak Lurus pada** $\vec{v}$
 
 $$
 (\vec{u} \times \vec{v}) \cdot \vec{v} =
