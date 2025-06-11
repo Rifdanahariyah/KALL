@@ -166,6 +166,7 @@ Vektor dari Titik-Titik
 Titik $A = (0, 0, 0)$ → Titik pangkal semua vektor
 
 * Titik $C = (1, 1, 1)$ → Maka:
+
 $$\vec{v} = \vec{AC} = 
 \begin{pmatrix}
 1 \\
@@ -174,6 +175,7 @@ $$\vec{v} = \vec{AC} =
 $$
 
 * Titik $D = (1, 0, 0)$ → Maka:
+
 $$\vec{w} = \vec{AD} = 
 \begin{pmatrix}
 1 \\
@@ -183,6 +185,7 @@ $$\vec{w} = \vec{AD} =
 $$
 
 * Titik $E = (0, 1, 0)$ → Maka:
+
 $$ \vec{a} = \vec{AE} = \begin{pmatrix}
 0 \\
 1 \\
