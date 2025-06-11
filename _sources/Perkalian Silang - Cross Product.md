@@ -183,7 +183,6 @@ $\vec{w} = \vec{AD} =
 $
 
 * Titik $E = (0, 1, 0)$ → Maka:
-
 $\vec{a} = \vec{AE} = \begin{pmatrix}
 0 \\
 1 \\
