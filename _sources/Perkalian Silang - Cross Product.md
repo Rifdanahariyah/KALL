@@ -163,35 +163,33 @@ Misalkan:
 
 Vektor dari Titik-Titik
 
-Titik $A = (0, 0, 0)$ → Titik pangkal semua vektor
+* Titik $A = (0, 0, 0)$ → Titik pangkal semua vektor
 
 * Titik $C = (1, 1, 1)$ → Maka:
-
-$$\vec{v} = \vec{AC} = 
+$\vec{v} = \vec{AC} = 
 \begin{pmatrix}
 1 \\
 1 \\
 1\end{pmatrix}
-$$
+$
 
 * Titik $D = (1, 0, 0)$ → Maka:
-
-$$\vec{w} = \vec{AD} = 
+$\vec{w} = \vec{AD} = 
 \begin{pmatrix}
 1 \\
 0 \\
 0
 \end{pmatrix}
-$$
+$
 
 * Titik $E = (0, 1, 0)$ → Maka:
 
-$$ \vec{a} = \vec{AE} = \begin{pmatrix}
+$\vec{a} = \vec{AE} = \begin{pmatrix}
 0 \\
 1 \\
 0
 \end{pmatrix}
-$$
+$
 
 Menghitung hasil perkalian silang menggunakan determinan matriks:
 
@@ -240,6 +238,7 @@ $$
 $$
 
 Hasil akhir:
+
 $$
 \vec{w} \times \vec{a} = 
 \begin{pmatrix}
@@ -255,11 +254,11 @@ $$
 
 * $A = (0, 0, 0)$ → Titik pangkal semua vektor
 * $B = (1, 1, 1)$, maka vektor:
-$$\vec{u} = \vec{AB} = \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}$$
+$\vec{u} = \vec{AB} = \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}$
 * $C = (2, 1, 1)$, maka vektor:
-$$\vec{v} = \vec{AC} = \begin{pmatrix} 2 \\ 1 \\ 1 \end{pmatrix}$$
+$\vec{v} = \vec{AC} = \begin{pmatrix} 2 \\ 1 \\ 1 \end{pmatrix}$
 * $D = (0, 0, -1)$, maka vektor:
-$$\vec{w} = \vec{AD} = \begin{pmatrix} 0 \\ 0 \\ -1 \end{pmatrix}$$
+$\vec{w} = \vec{AD} = \begin{pmatrix} 0 \\ 0 \\ -1 \end{pmatrix}$
 
 Perkalian Silang $(\vec{u} \times \vec{v})$
 
@@ -445,7 +444,7 @@ $$
 
 #### **Tugas**
 
-##### **1. Tentukan luas jajaran genjang yang ditentukan oleh vektor $\vec{u} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad \vec{v} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}$**
+###### **1. Tentukan luas jajaran genjang yang ditentukan oleh vektor $\vec{u} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad \vec{v} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}$**
 
 Dengan menambahkan komponen $z=0$ agar bisa menggunakan cross product:
 
@@ -473,7 +472,7 @@ $$
 
 ---
 
-##### **2. Tentukan luas jajaran genjang yang ditentukan oleh vektor $\vec{u} = \begin{bmatrix} 2 \\ 0 \end{bmatrix}, \quad \vec{v} = \begin{bmatrix} 0 \\ 3 \end{bmatrix}$**
+###### **2. Tentukan luas jajaran genjang yang ditentukan oleh vektor $\vec{u} = \begin{bmatrix} 2 \\ 0 \end{bmatrix}, \quad \vec{v} = \begin{bmatrix} 0 \\ 3 \end{bmatrix}$**
 
 Dengan menambahkan komponen $z=0$ agar bisa menggunakan cross product:
 
@@ -514,7 +513,7 @@ $$
 
 ---
 
-##### **3. Tentukan luas segitiga dengan titik-titik sudut $A = (0, 0, 0), \quad B = (1, 3, -1), \quad C = (2, 1, 1)$**
+###### **3. Tentukan luas segitiga dengan titik-titik sudut $A = (0, 0, 0), \quad B = (1, 3, -1), \quad C = (2, 1, 1)$**
 
 Hitung vektor:
 
@@ -558,7 +557,7 @@ $$
 
 ---
 
-##### **4. Tentukan luas segitiga dengan titik-titik sudut $A = (5, 2, -1), \quad B = (3, 6, 2), \quad C = (1, 0, 4)$**
+###### **4. Tentukan luas segitiga dengan titik-titik sudut $A = (5, 2, -1), \quad B = (3, 6, 2), \quad C = (1, 0, 4)$**
 
 Hitung vektor:
 
