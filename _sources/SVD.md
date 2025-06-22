@@ -54,7 +54,9 @@ Berikut adalah beberapa kegunaan SVD:
 
 #### **Contoh 1:**
 
-Matriks: $$
+Matriks: 
+
+$$
 A = \begin{bmatrix}
 3 & 1 \\
 1 & 3
