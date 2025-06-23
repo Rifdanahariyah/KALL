@@ -131,16 +131,51 @@ $$
 $$
 \Rightarrow
 \begin{cases}
-\lambda_1 = 10 - 6 = 4 \\
-\lambda_2 = 10 + 6 = 16
+\lambda_1 = 10 + 6 = 16 \\
+\lambda_2 = 10 - 6 = 4
 \end{cases}
 $$
 
 $$
-\lambda_1 = 4, \quad \lambda_2 = 16
+\lambda_1 = 16, \quad \lambda_2 = 4
 $$
 
+* **Hitung Singular Values**
+
+$$\sigma_1 = \sqrt{16} = 4, \quad \sigma_2 = \sqrt{4} = 2$$
+
 * **Mencari Eigenvector**
+
+Untuk $\lambda = 16:$
+
+$$
+( A^{T}A - 16I ) = 
+\begin{bmatrix}
+-6 & 6 \\
+6 & -6
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+= 0
+\Rightarrow -6x + 6y = 0 \Rightarrow x = y
+$$
+
+$$
+\vec{v}_1 = 
+\begin{bmatrix}
+1 \\
+1
+\end{bmatrix}
+\Rightarrow 
+\frac{1}{\sqrt{2}} 
+\begin{bmatrix}
+1 \\
+1
+\end{bmatrix}
+$$
 
 Untuk $\lambda = 4:$
 
@@ -162,7 +197,7 @@ y
 $$
 
 $$
-\vec{v}_1 = 
+\vec{v}_2 = 
 \begin{bmatrix}
 1 \\
 -1
@@ -175,36 +210,107 @@ $$
 \end{bmatrix}
 $$
 
-Untuk $\lambda = 16:$
+Maka:
+
+$$V = 
+\begin{bmatrix}
+\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}
+\end{bmatrix}$$
+
+* **Hitung $U$ dengan rumus**
 
 $$
-( A^{T}A - 16I ) = 
-\begin{bmatrix}
--6 & 6 \\
-6 & -6
-\end{bmatrix}
-\cdot
-\begin{bmatrix}
-x \\
-y
-\end{bmatrix}
-= 0
-\Rightarrow -6x + 6y = 0 \Rightarrow x = y
+\vec{u}_i = \frac{1}{\sigma_i} A \mathbf{v}_i
 $$
 
+Untuk: $\sigma_1 = 4 \), \( \vec{v}_1 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 1 \end{bmatrix}$
+
 $$
-\vec{v}_2 = 
+\vec{u}_1 = \frac{1}{4} A \vec{v}_1 = \frac{1}{4} A \cdot \frac{1}{\sqrt{2}} 
 \begin{bmatrix}
 1 \\
 1
 \end{bmatrix}
-\Rightarrow 
-\frac{1}{\sqrt{2}} 
+= \frac{1}{4\sqrt{2}} 
+\begin{bmatrix}
+3 + 1 \\
+1 + 3
+\end{bmatrix}
+= \frac{1}{\sqrt{2}} 
 \begin{bmatrix}
 1 \\
 1
 \end{bmatrix}
 $$
+
+Untuk: $\sigma_2 = 2 \), \( \vec{v}_2 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ -1 \end{bmatrix}$  
+
+$$
+\vec{u}_2 = \frac{1}{2} A \vec{v}_2 = \frac{1}{2} A \cdot \frac{1}{\sqrt{2}} 
+\begin{bmatrix}
+1 \\
+-1
+\end{bmatrix}
+= \frac{1}{2\sqrt{2}} 
+\begin{bmatrix}
+3 - 1 \\
+1 - 3
+\end{bmatrix}
+= \frac{1}{\sqrt{2}} 
+\begin{bmatrix}
+1 \\
+-1
+\end{bmatrix}
+$$
+
+Maka:
+
+$$
+U = 
+\begin{bmatrix}
+\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}
+\end{bmatrix}
+$$
+
+* **Matriks $\Sigma$**
+
+$$\Sigma = 
+\begin{bmatrix}
+4 & 0 \\
+0 & 2
+\end{bmatrix}$$
+
+Maka:
+
+$$A = U \Sigma V^T$$
+
+Dengan:
+
+$$
+U = 
+\begin{bmatrix}
+\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}
+\end{bmatrix},
+\quad
+\Sigma = 
+\begin{bmatrix}
+4 & 0 \\
+0 & 2
+\end{bmatrix},
+\quad
+V = 
+\begin{bmatrix}
+\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}
+\end{bmatrix}
+$$
+
+
+
+---
 
 #### **Contoh 2:**
 
@@ -283,7 +389,7 @@ $$
 Untuk $\lambda_1 = 72.5$:
 
 $$
-(A^T A - \lambda I) \mathbf{v} = 0 \Rightarrow \mathbf{v}_1 \propto 
+(A^T A - \lambda I) \vec{v} = 0 \Rightarrow \vec{v}_1=
 \begin{bmatrix}
 0.316 \\
 0.949
@@ -293,7 +399,7 @@ $$
 Untuk $\lambda_2 = 14.6$:
 
 $$
-\mathbf{v}_2 \propto 
+\vec{v}_2 =
 \begin{bmatrix}
 0.949 \\
 -0.316
@@ -310,9 +416,9 @@ V^T =
 \end{bmatrix}
 $$
 
-* **Hitung $U$:**
+* **Hitung $U$ dengan rumus:**
 
-$$\mathbf{u}_i = \frac{1}{\sigma_i} A \mathbf{v}_i$$
+$$\vec{u}_i = \frac{1}{\sigma_i} A \vec{v}_i$$
 
 Misalnya:
 
@@ -328,7 +434,7 @@ A
 5.111
 \end{bmatrix}
 \Rightarrow
-\mathbf{u}_1 = \frac{1}{8.51}
+\vec{u}_1 = \frac{1}{8.51}
 \begin{bmatrix}
 2.669 \\
 5.705 \\
@@ -345,13 +451,25 @@ $$
 Begitu juga untuk vektor ortonormal kedua:
 
 $$
-\mathbf{u}_2 \approx 
+\vec{u}_2 \approx 
 \begin{bmatrix}
 -0.56 \\
 0.43 \\
 -0.70
 \end{bmatrix}
 $$
+
+* **Matriks $\Sigma$**
+
+$$
+\Sigma = 
+\begin{bmatrix}
+8.51 & 0 & 0 \\
+0 & 3.82 & 0 
+\end{bmatrix}
+$$
+
+Maka:
 
 Dekomposisi SVD dari matriks $A$ dalam bentuk $A = U \Sigma V^T$ adalah:
 
@@ -365,8 +483,7 @@ u_{31} & u_{32} & u_{33}
 \Sigma = 
 \begin{bmatrix}
 8.51 & 0 & 0 \\
-0 & 3.82 & 0 \\
-0 & 0 & 0
+0 & 3.82 & 0 
 \end{bmatrix}, \quad
 V^T = 
 \begin{bmatrix}
